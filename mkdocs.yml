@@ -1,0 +1,161 @@
+# Project information
+site_name: LPIC 1 RESOURCES
+site_description: 'An example MkDocs project using the Material theme'
+site_url: 'https://ICE.io/mk-docs'  # Change this to your site's URL
+
+# Theme settings
+theme:
+  
+  name: material
+  features: 
+   - navigation.tabs
+   - navigation.section
+   - navigation.tracking
+   - navigation.expand
+   - navigation.path
+   - navigation.prune
+   - navigation.instant
+   - navigation.instant.progress
+   - navigation.instant.preview
+   - navigation.top
+   - toc.integrate 
+   - toc.follow
+   - search.suggest
+   - search.highlight
+   - search.share
+   - search.related
+   - content.tabs.link
+   - content.code.annotation
+   - content.code.copy
+   - header.autohide
+   
+  theme:
+  font:
+    text: Aref Ruqaa Ink
+  
+
+
+  plugins:
+   - search
+   - tags
+   - blog
+   - privacy
+
+  language: en
+  palette: 
+   
+   - scheme: default
+     toggle: 
+       icon: material/weather-night
+       name: switch to dark mode
+     primary: teal
+     accent: purple
+   - scheme: slate
+     toggle: 
+       icon: material/weather-sunny
+       name: switch to light mode
+     primary: teal
+     accent: lime
+
+# extra links
+  extra:
+    social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/micheal-ndoh
+      name: Github
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/micheal-ndoh/
+      name: Linkedin
+    - icon: fontawesome/brands/discord
+      link: https://discord.com/users/1128041830760587446
+      name: Discord
+    generator: false
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - admonition
+  - pymdownx.arithmatex:
+    generic: true
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.mark
+  - attr_list
+  - pymdownx.emoji:
+     emoji_index: !!python/name:materialx.emoji.twemoji
+     emoji_generator: !!python/name:materialx.emoji.to_svg
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+# Navbar settings (site structure)
+nav:
+  - Home: index.md
+  - TOPICS: 
+    - SYSTEM ARCHITECTURE: SYSTEM Architecture.md
+    - VIRTUALIZATION: VIRTUALIZATION.md
+    - LINUX INSTALLATION: Linux Installation and Package Management.md
+    - PACKAGE MANAGEMENT: Package_Management.md
+    - MULTIPASS: Multipass.md
+    - SHELL SCRIPTING: SHELL-SCRIPTING.md
+    - USER MANAGEMENT: USER MANAGEMENT.md
+    - GNU: GNU.md
+    - UNIX COMMANDS: GNU & UNIX commands.md
+    - LOCALIZATION: localization.md
+    - FILE SYSTEMS: File_systems.md
+    - SCHEDULING JOBS: Schedulingjobs.md
+  - USEFUL COMMANDS: Commands.md
+  - About: about.md
+
+extra:
+  analytics: 
+    feedback:
+      title: Was this page helpful?
+      ratings:
+        - icon: material/heart
+          name: This page was helpful
+          data: 1
+          note: >-
+            Thanks for your feedback!
+        - icon: material/heart-broken
+          name: This page could be improved
+          data: 0
+          note: >- 
+            Thanks for your feedback! Help us improve this page by
+            using our <a href="..." target="_blank" rel="noopener">feedback form</a>. 
+
+
+extra:
+  consent:
+    title: Cookie consent
+    description: >- 
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
+      extra:
+    actions:
+      - accept
+      - reject
+      - manage
+
+# Extra settings
+markdown_extensions:
+  - admonition
+  - codehilite
+  - toc:
+      permalink: true
+
+# Repository configuration (for the edit link on pages)
+repo_name: MICHEAL's
+repo_url: https://github.com/micheal-ndoh/mk-docs.git
+edit_uri: edit/main/docs/
+repo: fontawesome/brands/git-alt 
+
+copyright: >
+  Copyright &copy; 2024 MICHEAL NDOH –
+  <a href="#__consent">Change cookie settings</a>
