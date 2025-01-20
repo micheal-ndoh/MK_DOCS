@@ -1,7 +1,7 @@
 # Project information
 site_name: LPIC 1 RESOURCES
 site_description: 'An example MkDocs project using the Material theme'
-site_url: 'https://ICE.io/mk-docs'  # Change this to your site's URL
+site_url: 'https://ICE.io/mk-docs' 
 
 # Theme settings
 theme:
@@ -85,8 +85,8 @@ markdown_extensions:
   - pymdownx.mark
   - attr_list
   - pymdownx.emoji:
-     emoji_index: !!python/name:materialx.emoji.twemoji
-     emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 extra_javascript:
   - javascripts/mathjax.js
@@ -152,7 +152,7 @@ markdown_extensions:
 
 # Repository configuration (for the edit link on pages)
 repo_name: MICHEAL's
-repo_url: https://github.com/micheal-ndoh/mk-docs.git
+repo_url: https://github.com/micheal-ndoh/MK_DOCS.git
 edit_uri: edit/main/docs/
 repo: fontawesome/brands/git-alt 
 
