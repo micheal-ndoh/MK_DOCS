@@ -1,40 +1,29 @@
-name: Deploy MkDocs to GitHub Pages
-
 on:
   push:
-    branches:
-      - master 
-      - main  # Trigger workflow only on pushes to the master branch
-
-permissions: 
-  contents: write
-
+       branches:
+    - master
 jobs:
-  deploy:
-    runs-on: ubuntu-latest
+  build: 
+    runs-on: ubuntu-22.04
+    permissions:
+      packages: write 
 
     steps:
       # Checkout the repository code
       - name: Checkout code
         uses: actions/checkout@v3
-        
 
-      # Set up Python environment
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.x'
+      - name: Login to Container Registry
+        uses: docker/login-action@v2
+        with: 
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
 
-      # Install dependencies (MkDocs and Material theme)
-      - name: Install dependencies
-        run: |
-          pip install mkdocs-material
-
-      # Build and deploy the site to GitHub Pages
-      - name: Deploy to GitHub Pages          
-        run: |
-          # sed -i -E "s/your-username/${{github.repository_owner}}/g" ./README.md
-          # sed -i -E "s/my-mkdocs-project/${{github.repository}}/g" ./README.md
-          git remote set-url origin https://x-access-token:${GH_TOKEN}@github.com/ADORSYS-GIS/mk-docs.git
-      
-          mkdocs gh-deploy --force
+      - name: Build Project
+        uses: docker/build-push-action@v4
+        with: 
+          tag: |
+            ghcr.io/${{ github.repository }}:latest
+            ghcr.io/${{ github.repository }}:${{ github.run_number }}
+       
