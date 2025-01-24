@@ -17,6 +17,11 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Set environment variables
+        run: |
+          echo "REPO_OWNER=${GITHUB_ACTOR,,}" >> $GITHUB_ENV
+          echo "REPO_NAME=${GITHUB_EVENT_REPOSITORY_NAME,,}" >> $GITHUB_ENV
+
       - name: Login to Container Registry
         uses: docker/login-action@v2
         with:
@@ -26,9 +31,6 @@ jobs:
 
       - name: Build Project
         uses: docker/build-push-action@v4
-        env:
-          REPO_OWNER: ${{ github.actor | lowercase }}
-          REPO_NAME: ${{ github.event.repository.name | lowercase }}
         with:
           context: .
           push: true
