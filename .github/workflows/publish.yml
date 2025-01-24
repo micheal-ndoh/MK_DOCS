@@ -31,11 +31,13 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Build Project
-        uses: docker/build-push-action@v4
-        with:
-          context: .
-          push: true
-          tags: |
-            ghcr.io/${{ env.REPO_OWNER }}/${{ env.REPO_NAME }}:latest
-            ghcr.io/${{ env.REPO_OWNER }}/${{ env.REPO_NAME }}:${{ github.sha }}
+      - name: Install and run docker-slim
+        run: |
+          curl -sSL https://download.docker.com/linux/static/stable/x86_64/docker-slim-1.38.0.tar.gz | tar -xvz -C /usr/local/bin --strip-components=1 docker-slim/docker-slim
+          chmod +x /usr/local/bin/docker-slim
+          docker build -t mk .
+          docker-slim build --tag mkdocs mk
+          docker tag mkdocs:latest ghcr.io/${{ env.REPO_OWNER }}/${{ env.REPO_NAME }}:latest
+          docker tag mkdocs:latest ghcr.io/${{ env.REPO_OWNER }}/${{ env.REPO_NAME }}:${{ github.sha }}
+          docker push ghcr.io/${{ env.REPO_OWNER }}/${{ env.REPO_NAME }}:latest
+          docker push ghcr.io/${{ env.REPO_OWNER }}/${{ env.REPO_NAME }}:${{ github.sha }}
