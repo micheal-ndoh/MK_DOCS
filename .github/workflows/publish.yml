@@ -31,12 +31,12 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Install and run docker-slim
+      - name: Download, extract, build and slim the image
         run: |
-          curl -sSL https://download.docker.com/linux/static/stable/x86_64/docker-slim-1.38.0.tar.gz | tar -xvz -C /usr/local/bin --strip-components=1 docker-slim/docker-slim
-          chmod +x /usr/local/bin/docker-slim
-          docker build -t mk .
-          docker-slim build --tag mkdocs mk
+          curl -L -o ds.tar.gz https://github.com/slimtoolkit/slim/releases/download/1.40.11/dist_linux.tar.gz
+          tar -xvzf ds.tar.gz
+          docker build -t mkdocs .
+          sudo docker run -it --rm -v /var/run/docker.sock:/var/run/docker.sock dslim/slim build mkdocs
           docker tag mkdocs:latest ghcr.io/${{ env.REPO_OWNER }}/${{ env.REPO_NAME }}:latest
           docker tag mkdocs:latest ghcr.io/${{ env.REPO_OWNER }}/${{ env.REPO_NAME }}:${{ github.sha }}
           docker push ghcr.io/${{ env.REPO_OWNER }}/${{ env.REPO_NAME }}:latest
