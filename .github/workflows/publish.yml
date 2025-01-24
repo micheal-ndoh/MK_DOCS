@@ -10,6 +10,7 @@ jobs:
     runs-on: ubuntu-22.04
     permissions:
       packages: write 
+      contents: read
 
     steps:
       # Checkout the repository code
@@ -23,11 +24,9 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Build Project
+      - name: Build and Push Project
         uses: docker/build-push-action@v4
         with:
           context: .
           push: true
-          tags: |
-            ghcr.io/${{ vars.REPOSITORY }}:latest
-            ghcr.io/${{ vars.REPOSITORY }}:${{ github.run_number }}
+          tags: ghcr.io/${{ github.repository }}:latest, ghcr.io/${{ github.repository }}:${{ github.run_number }}
