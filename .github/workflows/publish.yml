@@ -19,8 +19,10 @@ jobs:
 
       - name: Set environment variables
         run: |
-          echo "REPO_OWNER=${GITHUB_ACTOR,,}" >> $GITHUB_ENV
-          echo "REPO_NAME=${GITHUB_EVENT_REPOSITORY_NAME,,}" >> $GITHUB_ENV
+          REPO_OWNER=$(echo "${GITHUB_REPOSITORY}" | cut -d '/' -f 1 | tr '[:upper:]' '[:lower:]')
+          REPO_NAME=$(echo "${GITHUB_REPOSITORY}" | cut -d '/' -f 2 | tr '[:upper:]' '[:lower:]')
+          echo "REPO_OWNER=${REPO_OWNER}" >> $GITHUB_ENV
+          echo "REPO_NAME=${REPO_NAME}" >> $GITHUB_ENV
 
       - name: Login to Container Registry
         uses: docker/login-action@v2
