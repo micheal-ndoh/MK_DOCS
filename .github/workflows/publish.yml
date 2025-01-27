@@ -45,7 +45,7 @@ jobs:
             ghcr.io/${{ env.REPO_OWNER }}/${{ env.REPO_NAME }}:latest
             ghcr.io/${{ env.REPO_OWNER }}/${{ env.REPO_NAME }}:${{ github.sha }}
 
-      # Install DockerSlim
+# Install DockerSlim
       - name: Install DockerSlim
         run: |
           curl -L -o ds.tar.gz https://github.com/slimtoolkit/slim/releases/download/1.40.11/dist_linux.tar.gz
