@@ -2,6 +2,7 @@
 
 This repository contains the source files for my MkDocs documentation project, using the [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) theme.
 
+
 ## 📚 Project Overview
 
 - **MkDocs**: A fast, simple static site generator for building project documentation.
@@ -14,7 +15,9 @@ You can view the live version of this documentation at:
 
 ## 🛠️ Local Setup
 
-To run the project locally and preview the documentation:
+There are two ways to run the project locally and preview the documentation:
+
+## Running it using mkdocs serve. 
 
 1. **Clone the repository**:
     ```bash
@@ -50,6 +53,21 @@ To run the project locally and preview the documentation:
     ```bash
     mkdocs gh-deploy
     ```
+## 🐳 Running a docker container using my mkdocs docker image
+ 
+ 1. Pull the image from my git hub packages
+```bash
+docker pull ghcr.io/micheal-ndoh/mk_docs:latest
+```
+2.After successfully pulling the image run a docker container with it.
+```bash
+docker run -itd -p 8080:80 ghcr.io/micheal-ndoh/mk_docs
+```
+3. Access the contents on your browser using the ip address of your container and the port you assigned when running the container   <your IP>:8080
+```
+e.g 10.38.229.171:8080
+```
+
 
 ## 📄 License
 
