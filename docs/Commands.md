@@ -48,7 +48,7 @@ rmmod -s bluetooth
  removes the Bluetooth module.
 
  ### ```modprobe```
-Purpose : modprobe is used to load or unload kernel modules.
+**Purpose** : modprobe is used to load or unload kernel modules.
 
 #### Flags:
 
@@ -60,7 +60,7 @@ Purpose : modprobe is used to load or unload kernel modules.
 Example: modprobe -r bluetooth removes the Bluetooth module.
 
 ### ```lspci```
-Purpose : lspci is used to list and gather information about PCI buses and devices.
+**Purpose** : lspci is used to list and gather information about PCI buses and devices.
 
 #### Flags:
 
@@ -76,7 +76,7 @@ Purpose : lspci is used to list and gather information about PCI buses and devic
 
 ### ```dpkg```
 
-**Purpose : package manager for Debian
+**Purpose** : package manager for Debian
 
 #### Flags:
 
@@ -88,7 +88,7 @@ Purpose : lspci is used to list and gather information about PCI buses and devic
 - ```--install``` : Install a package with options (e.g., dpkg --install --force-overwrite package.deb)
 
 ### ```apt```
-Purpose : package manager for Debian
+**Purpose** : package manager for Debian
 
 #### Flags:
 
@@ -100,7 +100,7 @@ Purpose : package manager for Debian
 ```--fix-broken``` : Fix broken dependencies (e.g., apt install --fix-broken)
 
 ### ```yum```
-Purpose : Package management system for RPM-based Linux distributions, such as Red Hat Enterprise Linux (RHEL), CentOS, and Fedora.
+**Purpose** : Package management system for RPM-based Linux distributions, such as Red Hat Enterprise Linux (RHEL), CentOS, and Fedora.
 
 #### Flags:
 
@@ -112,7 +112,7 @@ Purpose : Package management system for RPM-based Linux distributions, such as R
 - ```--setopt``` : Set a configuration option (e.g., yum install --setopt=tsflags=nodocs package)
 
 ### ```dnf```
-Purpose : Next-generation package manager for RPM-based Linux distributions, replacing YUM as the default package manager in Fedora and other RHEL-based systems.
+**Purpose** : Next-generation package manager for RPM-based Linux distributions, replacing YUM as the default package manager in Fedora and other RHEL-based systems.
 
 #### Flags:
 
@@ -123,9 +123,9 @@ Purpose : Next-generation package manager for RPM-based Linux distributions, rep
 - ```--disablerepo``` : Disable a specific repository (e.g., dnf install --disablerepo=epel package)
 - ```--allow-erasing``` : Allow erasing of installed packages to resolve dependencies (e.g., dnf install --allow-erasing package)
 
->### ```zypper```
->
-Purpose : Package manager for openSUSE and SUSE Linux Enterprise distributions, as well as other RPM-based systems.
+### ```zypper```
+
+**Purpose** : Package manager for openSUSE and SUSE Linux Enterprise distributions, as well as other RPM-based systems.
 
 #### Flags:
 
@@ -139,8 +139,8 @@ Purpose : Package manager for openSUSE and SUSE Linux Enterprise distributions, 
 
 
 # GNU AND UNIX COMMANDS
->### ```rm``` (Remove)
-Purpose: Delete files and directories
+### ```rm``` (Remove)
+**Purpose**: Delete files and directories
 
 ####Flags:
 
@@ -152,7 +152,7 @@ Purpose: Delete files and directories
 Example: rm -r /path/to/directory deletes the directory and its contents recursively
 
 ### ```ls``` (List)
-Purpose: Display file and directory information
+**Purpose:** Display file and directory information
 
 Flags:
 
@@ -164,7 +164,7 @@ Flags:
 Example: ls -l /path/to/directory shows detailed information about files and directories in the specified path
 
 ### ```uname``` (Unix Name)
-Purpose: Display system information
+**Purpose**: Display system information
 
 Flags:
 
@@ -176,7 +176,7 @@ Flags:
 Example: uname -a displays all system information
 
 ### ```kill```
-Purpose: Send a signal to terminate a process
+**Purpose:** Send a signal to terminate a process
 
 Flags:
 
@@ -188,7 +188,7 @@ Flags:
 Example: kill -9 <process_id> terminates a process immediately
 
 ### ```job```
-Purpose: Manage jobs (background processes) in the shell
+**Purpose:** Manage jobs (background processes) in the shell
 
 Flags:
 
@@ -204,7 +204,7 @@ Example: job -l lists all running jobs
 # Devices, Linux Filesystems, Filesystem Hierarchy Standard
 
 ### ```lsblk```
-Purpose: lists information about all available or the specified block devices.
+**Purpose**: lists information about all available or the specified block devices.
 
 #### Flags:
 
@@ -215,7 +215,7 @@ Purpose: lists information about all available or the specified block devices.
  - ```-p, --paths```: Print full device paths.
 
 ### ```mkfs```
-Purpose: is used to build a Linux filesystem on a device, usually a hard disk partition.
+**Purpose:** is used to build a Linux filesystem on a device, usually a hard disk partition.
 
 #### Flags:
 
@@ -227,7 +227,7 @@ would be done if executed without the n option.
 - ```-q``` : Quiet mode. mke2fs will run normally, but will not produce any output to the terminal.
 
 ### ```du```
-Purpose : estimate file space usage.
+**Purpose**: estimate file space usage.
 
 #### Flags:
 
@@ -238,7 +238,7 @@ Purpose : estimate file space usage.
 - ```--inodes``` : list inode usage information instead of block usage.
 
 ### ```df```
-Purpose : displays the amount of disk space available on the already mounted file systems.
+**Purpose**: displays the amount of disk space available on the already mounted file systems.
 
 #### Flags:
 - ```-a, --all```: includes all file systems even inaccessible ones.
@@ -248,7 +248,7 @@ Purpose : displays the amount of disk space available on the already mounted fil
 - ```-T, --print-type``` :     print file system type.
 
 ###  ```mount``` 
-Purpose : mount a filesystem.
+**Purpose** : mount a filesystem.
 
 Flag:
 
