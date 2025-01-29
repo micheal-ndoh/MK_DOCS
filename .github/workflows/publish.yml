@@ -1,5 +1,3 @@
-name: Build and Push Docker Image
-
 on:
   push:
     branches:
@@ -19,7 +17,6 @@ jobs:
         with:
           fetch-depth: 0
 
-      # Set environment variables
       - name: Set environment variables
         run: |
           REPO_OWNER=$(echo "${GITHUB_REPOSITORY}" | cut -d '/' -f 1 | tr '[:upper:]' '[:lower:]')
@@ -27,7 +24,6 @@ jobs:
           echo "REPO_OWNER=${REPO_OWNER}" >> $GITHUB_ENV
           echo "REPO_NAME=${REPO_NAME}" >> $GITHUB_ENV
 
-      # Login to Container Registry
       - name: Login to Container Registry
         uses: docker/login-action@v2
         with:
@@ -35,7 +31,6 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      # Build Project
       - name: Build Project
         uses: docker/build-push-action@v4
         with:
@@ -43,9 +38,7 @@ jobs:
           push: false
           tags: |
             ghcr.io/${{ env.REPO_OWNER }}/${{ env.REPO_NAME }}:latest
-            ghcr.io/${{ env.REPO_OWNER }}/${{ env.REPO_NAME }}:${{ github.sha }}
 
-      # Install DockerSlim
       - name: Install DockerSlim
         run: |
           curl -L -o ds.tar.gz https://github.com/slimtoolkit/slim/releases/download/1.40.11/dist_linux.tar.gz
@@ -54,12 +47,19 @@ jobs:
           sudo find /tmp/slim -name docker-slim -exec mv {} /usr/local/bin/ \;
           sudo chmod +x /usr/local/bin/docker-slim
 
-      # Optimize Docker Image with DockerSlim
       - name: Optimize Docker Image with DockerSlim
         run: |
-          sudo docker run -it --rm -v /var/run/docker.sock:/var/run/docker.sock dslim/slim build ghcr.io/${{ env.REPO_OWNER }}/${{ env.REPO_NAME }}:latest
+          sudo docker-slim build --tag ghcr.io/${{ env.REPO_OWNER }}/${{ env.REPO_NAME }}:latest-slim ghcr.io/${{ env.REPO_OWNER }}/${{ env.REPO_NAME }}:latest
 
-      # Push Optimized Docker Image
+      - name: Push Original Docker Image
+        uses: docker/build-push-action@v4
+        with:
+          context: .
+          push: true
+          tags: |
+            ghcr.io/${{ env.REPO_OWNER }}/${{ env.REPO_NAME }}:latest
+            ghcr.io/${{ env.REPO_OWNER }}/${{ env.REPO_NAME }}:${{ github.sha }}
+
       - name: Push Optimized Docker Image
         uses: docker/build-push-action@v4
         with:
