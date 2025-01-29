@@ -45,7 +45,7 @@ jobs:
             ghcr.io/${{ env.REPO_OWNER }}/${{ env.REPO_NAME }}:latest
             ghcr.io/${{ env.REPO_OWNER }}/${{ env.REPO_NAME }}:${{ github.sha }}
 
-# Install DockerSlim
+      # Install DockerSlim
       - name: Install DockerSlim
         run: |
           curl -L -o ds.tar.gz https://github.com/slimtoolkit/slim/releases/download/1.40.11/dist_linux.tar.gz
@@ -54,7 +54,7 @@ jobs:
           sudo find /tmp/slim -name docker-slim -exec mv {} /usr/local/bin/ \;
           sudo chmod +x /usr/local/bin/docker-slim
 
-     # Optimize Docker Image with DockerSlim
+      # Optimize Docker Image with DockerSlim
       - name: Optimize Docker Image with DockerSlim
         run: |
           sudo docker run -it --rm -v /var/run/docker.sock:/var/run/docker.sock dslim/slim build ghcr.io/${{ env.REPO_OWNER }}/${{ env.REPO_NAME }}:latest
