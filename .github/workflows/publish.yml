@@ -54,7 +54,7 @@ jobs:
 
       - name: Optimize Docker Image with DockerSlim
         run: |
-          sudo docker-slim build --tag ghcr.io/${{ env.REPO_OWNER }}/${{ env.REPO_NAME }}:latest-slim ghcr.io/${{ env.REPO_OWNER }}/${{ env.REPO_NAME }}:latest
+          docker-slim build --tag ghcr.io/${{ env.REPO_OWNER }}/${{ env.REPO_NAME }}:latest-slim ghcr.io/${{ env.REPO_OWNER }}/${{ env.REPO_NAME }}:latest
 
       - name: Push Original Docker Image
         uses: docker/build-push-action@v4
