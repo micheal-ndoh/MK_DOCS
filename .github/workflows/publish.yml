@@ -43,18 +43,11 @@ jobs:
         run: |
 
            curl -L -o ds.tar.gz https://github.com/slimtoolkit/slim/releases/download/1.40.11/dist_linux.tar.gz
-         
 
-        
-         # curl -L -o ds.tar.gz https://github.com/slimtoolkit/slim/releases/download/1.40.11/dist_linux.tar.gz
-          #mkdir -p /tmp/slimlim 
-          #tar -xvf ds.tar.gz -C /tmp/slim
-          #sudo mv /tmp/slim/dist_linux/docker-s/usr/local/bin/docker-slim
-          #sudo chmod +x /usr/local/bin/docker-slim
-
+       
       - name: Optimize Docker Image with DockerSlim
         run: |
-          docker-slim build --tag ghcr.io/${{ env.REPO_OWNER }}/${{ env.REPO_NAME }}:latest-slim ghcr.io/${{ env.REPO_OWNER }}/${{ env.REPO_NAME }}:latest
+         sudo docker run -it --rm -v /var/run/docker.sock:/var/run/docker.sock dslim/slim build --tag ghcr.io/${{ env.REPO_OWNER }}/${{ env.REPO_NAME }}:latest-slim ghcr.io/${{ env.REPO_OWNER }}/${{ env.REPO_NAME }}:latest
 
       - name: Push Original Docker Image
         uses: docker/build-push-action@v4
