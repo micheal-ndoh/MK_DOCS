@@ -41,11 +41,16 @@ jobs:
 
       - name: Install DockerSlim
         run: |
-          curl -L -o ds.tar.gz https://github.com/slimtoolkit/slim/releases/download/1.40.11/dist_linux.tar.gz
-          mkdir -p /tmp/slim
-          tar -xvf ds.tar.gz -C /tmp/slim
-          sudo mv /tmp/slim/dist_linux/docker-slim /usr/local/bin/docker-slim
-          sudo chmod +x /usr/local/bin/docker-slim
+
+           curl -L -o ds.tar.gz https://github.com/slimtoolkit/slim/releases/download/1.40.11/dist_linux.tar.gz
+         
+
+        
+         # curl -L -o ds.tar.gz https://github.com/slimtoolkit/slim/releases/download/1.40.11/dist_linux.tar.gz
+          #mkdir -p /tmp/slimlim 
+          #tar -xvf ds.tar.gz -C /tmp/slim
+          #sudo mv /tmp/slim/dist_linux/docker-s/usr/local/bin/docker-slim
+          #sudo chmod +x /usr/local/bin/docker-slim
 
       - name: Optimize Docker Image with DockerSlim
         run: |
