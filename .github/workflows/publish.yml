@@ -41,7 +41,7 @@ jobs:
 
       - name: Optimize Docker Image with DockerSlim
         run: |
-          sudo docker run -it --rm -v /var/run/docker.sock:/var/run/docker.sock dslim/slim build --tag ghcr.io/${{ env.REPO_OWNER }}/${{ env.REPO_NAME }}:latest-slim ghcr.io/${{ env.REPO_OWNER }}/${{ env.REPO_NAME }}:latest
+          sudo docker run --rm -v /var/run/docker.sock:/var/run/docker.sock dslim/slim build --tag ghcr.io/${{ env.REPO_OWNER }}/${{ env.REPO_NAME }}:latest-slim ghcr.io/${{ env.REPO_OWNER }}/${{ env.REPO_NAME }}:latest
 
       - name: Push Original Docker Image
         uses: docker/build-push-action@v4
