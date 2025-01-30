@@ -1,4 +1,17 @@
-# Checkout the repository code
+on:
+  push:
+    branches:
+    - main
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    permissions:
+      packages: write
+      contents: read
+
+    steps:
+     # Checkout the repository code
       - name: Checkout code
         uses: actions/checkout@v3
         with:
