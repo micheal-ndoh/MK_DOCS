@@ -26,8 +26,27 @@ There are two ways to run the project locally and preview the documentation:
     ```
 
 2. **Install MkDocs and dependencies**:
+* Before installing mkdocs you need to ensure you have python and pip installed using
+  ```bash
+  sudo apt-get update
+  sudo apt-get install python3-pip
+  ```
+* If you encounter a error: externally-managed-environment problem do this
+  Create a virtual environment using
+  ```bash
+  python3 -m venv myenv
+  ```
+* then activate it with
+  ```bash
+  source myenv/bin/activate
+  ```
+ After activation,  install mkdocs using pip3 install mkdocs
+
+* Then install mkdocs and mkdocs materials
+  
     ```bash
     pip install mkdocs
+    pip3 install mkdocs-material
     ```
 
 3. **Run the MkDocs development server**:
