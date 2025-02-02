@@ -3,6 +3,7 @@ site_name: LPIC 1 RESOURCES
 site_description: 'An example MkDocs project using the Material theme'
 site_url: 'https://ICE.io/mk-docs' 
 
+dev_addr: 0.0.0.0:8000
 # Theme settings
 theme:
   
