@@ -1,7 +1,9 @@
+name: Publish
+
 on:
   push:
     branches:
-    - main
+      - main
 
 jobs:
   build:
@@ -11,7 +13,6 @@ jobs:
       contents: read
 
     steps:
-     # Checkout the repository code
       - name: Checkout code
         uses: actions/checkout@v3
         with:
@@ -42,6 +43,15 @@ jobs:
       - name: Optimize Docker Image with DockerSlim
         run: |
           sudo docker run --rm -v /var/run/docker.sock:/var/run/docker.sock dslim/slim build --tag ghcr.io/${{ env.REPO_OWNER }}/${{ env.REPO_NAME }}:latest-slim ghcr.io/${{ env.REPO_OWNER }}/${{ env.REPO_NAME }}:latest
+
+      - name: Start HTTP Server
+        run: |
+          nohup python -m http.server 80 &
+          sleep 10  # Give the server time to start
+
+      - name: Run HTTP Probe
+        run: |
+          curl --retry 5 --retry-delay 2 --retry-connrefused http://172.17.0.3:80/
 
       - name: Push Original Docker Image
         uses: docker/build-push-action@v4
