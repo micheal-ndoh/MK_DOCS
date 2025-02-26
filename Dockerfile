@@ -1,11 +1,12 @@
 FROM python:3.9-alpine AS builder
-WORKDIR /docs
 
 RUN apk add --no-cache nginx && \
     pip install --no-cache-dir mkdocs mkdocs-material
 
+WORKDIR /docs
 COPY . .
-RUN mkdocs build
+RUN mkdocs build && \
+    rm -rf /docs/docs /docs/mkdocs.yml
 
 FROM nginx:alpine
 
