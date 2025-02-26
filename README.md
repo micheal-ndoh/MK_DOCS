@@ -1,93 +1,105 @@
-# My MkDocs Project
+# **My MkDocs Project**
 
-This repository contains the source files for my MkDocs documentation project, using the [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) theme.
+Welcome to the source files repository for my MkDocs documentation project, utilizing the [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) theme. This project is designed to create clean, responsive, and professional documentation.
 
+---
 
-## 📚 Project Overview
+## **📚 Project Overview**
 
-- **MkDocs**: A fast, simple static site generator for building project documentation.
-- **Material for MkDocs**: A professional, responsive theme built on Google's Material Design principles.
+- **MkDocs**: A fast and straightforward static site generator tailored for building project documentation.  
+- **Material for MkDocs**: A modern theme based on Google's Material Design principles, offering a sleek and intuitive user experience.
 
-## 🚀 Live Documentation
+---
 
-You can view the live version of this documentation at:
+## **🚀 Live Documentation**
+
+You can view the live version of this documentation at:  
 [https://github.com/micheal-ndoh/MK_DOCS](https://github.com/micheal-ndoh/MK_DOCS)
 
-## 🛠️ Local Setup
+---
+
+## **🛠️ Local Setup**
 
 There are two ways to run the project locally and preview the documentation:
 
-## Running it using mkdocs serve. 
+---
 
-1. **Clone the repository**:
-    ```bash
-    git clone https://github.com/micheal-ndoh/MK_DOCS
-    cd MK_DOCS
-    ```
+### **1. Running with `mkdocs serve`**
 
-2. **Install MkDocs and dependencies**:
-* Before installing mkdocs you need to ensure you have python and pip installed using
-  ```bash
-  sudo apt-get update
-  sudo apt-get install python3-pip
-  ```
-* If you encounter a error: externally-managed-environment problem do this
-  Create a virtual environment using
-  ```bash
-  python3 -m venv myenv
-  ```
-* then activate it with
-  ```bash
-  source myenv/bin/activate
-  ```
- After activation,  install mkdocs using pip3 install mkdocs
+#### **Step 1: Clone the Repository**
+```bash
+git clone https://github.com/micheal-ndoh/MK_DOCS
+cd MK_DOCS
+```
 
-* Then install mkdocs and mkdocs materials
-  
-    ```bash
-    pip install mkdocs
-    pip3 install mkdocs-material
-    ```
+#### **Step 2: Install MkDocs and Dependencies**
+Before installing MkDocs, ensure Python and pip are installed:  
+```bash
+sudo apt-get update
+sudo apt-get install python3-pip
+```
 
-3. **Run the MkDocs development server**:
-    ```bash
-    mkdocs serve
-    ```
+If you encounter the **externally-managed-environment** error, create and activate a virtual environment:  
+```bash
+python3 -m venv myenv
+source myenv/bin/activate
+```
 
-    Open your browser and navigate to `http://127.0.0.1:8000` to view the documentation locally.
+Install MkDocs and the Material theme:  
+```bash
+pip install mkdocs
+pip install mkdocs-material
+```
 
-## 📦 Build and Deploy
+#### **Step 3: Run the Development Server**
+```bash
+mkdocs serve
+```
 
-- **Build the site**:
-    ```bash
-    mkdocs build
-    ```
+Open your browser and navigate to `http://127.0.0.1:8000` to view the documentation locally.
 
-    This will generate static files in the `site/` directory.
+---
 
-- **Deploy to GitHub Pages**:
-    The project is set up to automatically deploy via GitHub Actions when changes are pushed to the `main` branch.
+### **2. Running with Docker**
 
-    To manually deploy:
-    ```bash
-    mkdocs gh-deploy
-    ```
-## 🐳 Running a docker container using my mkdocs docker image
- 
- 1. Pull the image from my git hub packages
+#### **Step 1: Pull the Docker Image**
+Pull the MkDocs Docker image from GitHub Packages:  
 ```bash
 docker pull ghcr.io/micheal-ndoh/mk_docs:latest
 ```
-2.After successfully pulling the image run a docker container with it.
+
+#### **Step 2: Run the Docker Container**
 ```bash
 docker run -itd -p 8080:80 ghcr.io/micheal-ndoh/mk_docs
 ```
-3. Access the contents on your browser using the ip address of your container and the port you assigned when running the container   <your IP>:8080
+
+#### **Step 3: Access the Documentation**
+Open your browser and navigate to `<your-container-ip>:8080` (e.g., `10.38.229.171:8080`).
+
+---
+
+## **📦 Build and Deploy**
+
+#### **Build the Site**
+Generate static files for deployment:  
+```bash
+mkdocs build
 ```
-e.g 10.38.229.171:8080
+
+The output will be stored in the `site/` directory.
+
+#### **Deploy to GitHub Pages**
+The project is configured to automatically deploy via GitHub Actions when changes are pushed to the `main` branch.  
+
+To manually deploy:  
+```bash
+mkdocs gh-deploy
 ```
 
+---
 
-## 📄 License
+## **📄 License**
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the **MIT License**. For more details, see the [LICENSE](LICENSE) file.
+
+---
