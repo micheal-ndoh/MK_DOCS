@@ -60,8 +60,8 @@ theme:
       toggle:
         icon: material/weather-sunny
         name: Switch to light mode
-      primary: teal
-      accent: lime
+      primary: purple   
+      accent: lime     
 
 # Extra links
 extra:
