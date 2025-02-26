@@ -54,7 +54,8 @@ There are two ways to run the project locally and preview the documentation:
     mkdocs serve
     ```
 
-    Open your browser and navigate to `http://127.0.0.1:8000` to view the documentation locally.
+    Open your browser and navigate to `http://127.0.0.1:5000` to view the documentation locally.
+    Or using http://localhost:5000
 
 ## 📦 Build and Deploy
 
@@ -80,11 +81,11 @@ docker pull ghcr.io/micheal-ndoh/mk_docs:latest
 ```
 2.After successfully pulling the image run a docker container with it.
 ```bash
-docker run -itd -p 8080:80 ghcr.io/micheal-ndoh/mk_docs
+docker run -p 5000:5000 ghcr.io/micheal-ndoh/mk_docs:latest
 ```
-3. Access the contents on your browser using the ip address of your container and the port you assigned when running the container   <your IP>:8080
+3. Access the contents on your browser using the ip address of your container and the port you assigned when running the container   <your IP>:5000
 ```
-e.g 10.38.229.171:8080
+e.g 10.38.229.171:5000
 ```
 
 
