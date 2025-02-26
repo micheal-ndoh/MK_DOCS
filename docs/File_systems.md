@@ -1,135 +1,146 @@
+### **Introduction to Disk Partitioning**
 
-# Presentastion-on-filesystem-and-FHS
+In any operating system, before data can be stored on a disk, the disk must be partitioned. A partition is a logical subset of the physical disk. Information about the partitions is stored in the partition table, which includes details about the start and end sectors, as well as the type of each partition.
 
-**introduction**
+#### **Partitioning Systems**
 
-  On any operating system, a disk needs to be partitioned before it can be used. A partiton is a logical subset of the physical disk and information about your partitions are store in a partition table. this table include information about the first and the last sector of the partitons and its types.
-*there are two main ways of storing partitions information on a hard disk 
+1. **Master Boot Record (MBR)**:
+   - **Location**: Stored at the very beginning of a storage device.
+   - **Limitations**:
+     - It can only have 4 primary partitions or 3 primary partitions and 1 extended partition.
+     - It can't address disks larger than 2TB.
 
-   -1) the master boot record (MBR)
-   
-   -2) The guid partiton table (GPT)
-   
-MBR : this is a special type of boot sector located at the very beginning of a storage device such as :hard                   disk,ssd,which stores very crucial informations for the system to boot and manage partition.
-     feautures of MBR::it is limited to only 4 primary partitions per disk or 3 primary partition plus one extended,and        the inability to address disks more than 2TB in size.
+2. **GUID Partition Table (GPT)**:
+   - **Improvement**: GPT resolves many of MBR's limitations.
+   - **Features**:
+     - Supports disks up to 64TB.
+     - Allows an almost unlimited number of partitions (128 partitions on Windows).
+   - **Used in UEFI standard**.
 
-GPT : A partition system that is better than MBR since it addresses many of the limitions of the MBR. there is no practical limit ona disk size (64TB) and the maximum number of partitions are limited only by the operating system (but on windows we have 128 partitions) it is part of the UEFI  standard.
+### **Disk Partitioning in Linux**
 
-NOTE: on linux,each partition is assign to a directory under a /dev/sda1 (the sd indicates the SCSI(small computer system interface) and serial advance technology attachment(SATA) )
+Each partition in Linux is assigned a directory under `/dev/`. For example, `/dev/sda1` is the first partition of the first hard disk, and the naming convention follows for other devices. Linux uses **fdisk** and **gdisk** utilities for managing MBR and GPT partitions, respectively.
 
-Disk partitioning...this is the process of dividing a storage device into saperate distinct sections each of which can be managed independently
-there are two types of partitions :primary partition which is the main partition on the disk while and extended partiton act as a container to logical partitions 
+#### **fdisk (MBR)**
 
- fdisk: this is a standard utility for managing MBR partitions 
- - fdisk
- - lsblk
- - fdisk /dev/sda1
- - (P) list partition table
- - (n) creat new partition
- - (d) delete partition
-    
-*gdisk:
-- this is the main utility for creating GPT partitions.
-- gdisk /dev/sda15
-- n (choose your numb)
-- p (print)
-- d (delete)  
-## FILESYSTEM HS
+- Used to manage MBR partitions.
+- Common commands:
+  - `fdisk`: Enter partition utility.
+  - `lsblk`: List block devices.
+  - `fdisk /dev/sda`: Start managing partitions for the first hard disk.
+  - `(P)`: List partition table.
+  - `(n)`: Create a new partition.
+  - `(d)`: Delete a partition.
 
-A filesystem manages how data is stored ,retrived and oranized on a storage device ( hard drive ,usb)
-- FAT(file allocation table) used in usb drivs and memory cards
-- NTFS (new tech file system) supports large files ,encryption,file pemissions and journaling.
-- EXT (extended file system ) linux sysytems includes:ext2 ext3 ext4 with ext4 being widely used
+#### **gdisk (GPT)**
 
-  ##### create fs using ```mkfs```
+- Main utility for GPT partitions.
+- Commands:
+  - `gdisk /dev/sda`: Start managing GPT partitions.
+  - `n`: Create a new partition.
+  - `p`: Print partition table.
+  - `d`: Delete a partition.
+
+---
+
+### **Filesystem and Filesystem Types**
+
+A **filesystem** defines how data is stored and retrieved from a storage device.
+
+- **FAT (File Allocation Table)**: Common for USB drives and memory cards.
+- **NTFS (New Technology File System)**: Supports large files, encryption, file permissions, and journaling.
+- **EXT (Extended File System)**: Used in Linux systems with versions such as EXT2, EXT3, and EXT4 (EXT4 is the most widely used).
+
+#### **Creating a Filesystem in Linux:**
+
+- `mkfs.ext4 /dev/sda1`: Creates an EXT4 filesystem on the first partition of the first hard disk.
+- `mount`: Used to mount a filesystem. For example, `mount /dev/sda1 /mnt` mounts the partition to `/mnt`.
+- `cat /proc/self/mountinfo`: View detailed mount information.
+
+#### **Making a Swap (for Virtual Memory)**
+
+- `mkswap /dev/sda1`: Creates a swap space.
+- `swapon /dev/sda1`: Activates the swap.
   
-- mkfs.ext4 /dev/sda1
-- mount | grep ext4
-- cat /proc/self/mountinfo
-  
-TO mount filesystem 
-  - mount /dev/sda /mnt
-  
-TO make a swap(vm) 
-- mkswap /dev/sda1  
-- then umount /dev/sda15 
-- now make a swap ,mkswap /dev/sda1 1000 
-- swapon /dev/sda15 
-         
-##### Maintaining integrity of FS
+#### **Maintaining Filesystem Integrity**
 
-- ```du -h```;
-- ```du -a```  (shows an individual counts for all files or direcory),
-- ```du -sh``` (shows you how much space do the files in the current directory occupy ) ,
-- ```du -shc``` (the diff space used by file in the currnt directories and subdirectories) and 
-- ```df -i``` (show you used inodes instead of block) and fsck (check for errors in fs)
+- `du -h`: Shows disk usage in a human-readable format.
+- `df -i`: Shows inode usage.
+- `fsck`: Check and repair a filesystem.
 
+---
 
+### **File Permissions and Ownership**
 
-  Modifying file permissions 
-      -umask default value(00)  umask set a default permissins for every file created  for a directory(777) or a file(666)
-      - umask -S to get an output in symbolic mode.
-      - chmod: used to modfiy the permissions for a file
+In Linux, every file or directory has associated permissions and ownership.
+
+1. **Permissions**: Control who can read, write, and execute a file.
+   - **umask**: Sets default permissions for new files.
+   - **chmod**: Modify permissions (e.g., `chmod u+x file`).
+   - **chown**: Change ownership of a file (e.g., `sudo chown user:group file`).
+   - **chgrp**: Change the group ownership of a file (e.g., `chgrp group file`).
+
+2. **Types of Links**:
+   - **Hard Links**: Multiple entries in the filesystem pointing to the same data block (inode) on the disk.
+   - **Symbolic Links (Symlinks)**: Pointers to the path of another file.
+
+---
+
+### **Directory Structure in Linux**
+
+- `/`: The root directory, everything is contained within it.
+- `/bin`: Essential binaries for all users.
+- `/boot`: Files required for booting.
+- `/dev`: Device files representing hardware (e.g., `/dev/sda` for disks).
+- `/home`: User directories for personal files.
+- `/lib`: Shared libraries required for booting and running binaries under `/bin`.
+- `/media`: Mounted external devices.
+- `/mnt`: Mount points for temporarily mounted filesystems.
+- `/opt`: Application software packages.
+- `/root`: Superuser's home directory.
+- `/sbin`: System binaries.
+- `/tmp`: Temporary files.
+
+---
+
+### **File Operations**
+
+- **Creating files**: `touch file.txt` creates an empty file.
+- **Viewing files**: `cat file.txt` prints the content to the screen.
+- **Changing permissions**:
+  - `chmod 755 file`: Change permissions of a file.
+  - `chmod u+x file.txt`: Add execute permission to the user.
+
+### **Useful Commands for File Operations**
+
+- **chmod**: Modify file permissions.
+- **chown**: Modify file ownership.
+- **chgrp**: Modify file group ownership.
+- **ln -s**: Create a symbolic link.
+- **ln**: Create a hard link.
   
-### HARD AND SYMBLIC LINKS
+---
 
- symbolic links they point to the path of another file. hard link(original file) they an additional entry in the filsystem pointing to thesame place (inode)on the disk.
-Inode is a data structurethat stores attributes for an objects(permisions and ownership)like a file,dir on a fs
+### **Examples of Key Commands**
 
-  ### DIRECTORY STRUCTURE
-  
-  - / =every other directory is located inside it
-  - /bin =essentials binaries available to all users
-  - /boot =files needed to boot the process 
-  - /dev =hardware devices are represented in this dir like usb drives 
-  - /home =stores personal files of the user 
-  - /lib =shared libraries needed to boot the operation system and run binaries under /bin 
-  - /media =stores external devices like flash drives 
-  - /mnt =stores mount point for temporarily mounted fs 
-  - /opt =application software packages 
-  - /root =home director for super user 
-  - /sbin =system binary 
-  - /tmp =temporary files
-  - 
-         chmod : change permissions of a file or directory
-       - touch a file say text.text 
-       - ls -l text.text
-  
-    ### chmod: used to modfiy the permissions for a file 
-   - chmod u+g+rw-x,o-rwx text.text 
-   - ls -l text.text               (chmod 660 text.text thesame but in binary form)
-      
-  ### chown : it is used to modify the ownership of a file or directory
-     
-     - mkdir zara_pretty
-         -ls -l
-        cat /etc/group
-        - ls -la
-        - sudo addgroup zara_pretty 
-        - sudo chown nafisatou:zara_pretty txt.txt 
-        - ls -l txt.txt 
-  ## chgrp
-      use getent group to see which group exist on your system (the -l will list all of it members)
-       - grep "bash" /etc/passwd  
-       - grep "bin" /etc/passwd 
-   
-  ##we can also used pipeline to search text within files
-  
-        -ls -l | grep "test" 
-      REDIRECT  
-      
-      - echo "my name is zara" > output.txt 
-      
-      - cat output.txt
-      
-      
-      
-      
-      
-      
-           
-      
-      
+1. **Change permissions using chmod**:
+   - `chmod u+g+rw-x,o-rwx file.txt`: Adds read and write permissions for the user and group, removes all permissions for others.
+   - `ls -l file.txt`: Lists the file’s permissions.
 
- 
-  
+2. **Change ownership using chown**:
+   - `sudo chown user:group file.txt`: Change ownership of `file.txt` to `user` and group `group`.
+
+3. **Change group ownership using chgrp**:
+   - `chgrp group file.txt`: Change the group of `file.txt`.
+
+4. **Using `getent` to see group info**:
+   - `getent group`: Lists all groups.
+   - `grep "group_name" /etc/group`: Check if a specific group exists.
+
+5. **Pipelining Commands**:
+   - `ls -l | grep "pattern"`: Search for files matching a specific pattern.
+   - `echo "my name is zara" > output.txt`: Redirects the output to a file.
+
+---
+
+This provides a thorough understanding of filesystems, partitioning, file management, and key Linux commands related to storage and file permissions. The tools mentioned are essential for handling file structures, partitioning, and the management of disk spaces effectively.

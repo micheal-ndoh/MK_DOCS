@@ -1,178 +1,209 @@
-# Administrative Tasks
-## Introduction
-Administrative tasks are tasks managed by a system administrator. System administrators also known as sysadmins are information technology (IT) professionals who make sure an organisation's computer systems are functioning and meet the needs of the organisation. System administrators support, troubleshoot, and maintain computer servers and networks. 
-In this section we will be discussing more on;
-1. Manage user and group accounts and related system files
-1. Automate system administrative tasks by scheduling jobs
-1. Localisation and Internationalisation
-## Manage user and group accounts and related system files
-### Managing User and Group Accounts 
+Here’s a more polished and presentable version of your content, with improved formatting, clarity, and additional resources for better understanding:
 
-Linux provides a powerful set of tools for managing user and group accounts, crucial for system security and resource allocation. 
+---
 
-User Accounts:
+# **Administrative Tasks**
 
-• Adding Users account:
+## **Introduction**
 
-  Use useradd to add a new users.
+Administrative tasks are responsibilities managed by system administrators (sysadmins). Sysadmins are IT professionals who ensure an organization's computer systems function efficiently and meet operational needs. Their duties include supporting, troubleshooting, and maintaining computer servers and networks.
 
-  ```sh 
-  useradd username #creates a user with no home directory
-  ``` 
-  Some essential flags used when adding a new user
-  -m creates a new user account with its home directory
-  -d Create a new user account with a custom home directory
-  -c Comment about the user can be including when creating the user
-  -g to add user to a group
-  -s to create account with a specific login shell
+In this section, we will discuss:
+
+1. Managing user and group accounts and related system files.
+2. Automating system administrative tasks by scheduling jobs.
+3. Localization and internationalization.
+
+---
+
+## **Manage User and Group Accounts and Related System Files**
+
+### **Managing User and Group Accounts**
+
+Linux provides robust tools for managing user and group accounts, which are essential for system security and resource allocation.
+
+#### **User Accounts**
+
+**1. Adding Users**  
+Use the `useradd` command to create new users.  
+
 ```sh
-  useradd -m username 
-  useradd -d /path/to/home username 
-  useradd -c "Comment about the user" username 
-  useradd -g groupname username 
-  useradd -s /path/to/shell username 
-  ```
-  
-
-• Managing Users:
-
-  * passwd: Change a user's password.
-
-   ```sh
-   passwd username
-   ``` 
-   ```sh
-   passwd -e username #immediately expires a user's password
-   ```
-
-  * usermod: Modify user attributes (comment, group, home directory).
-
-    ```sh
-    usermod -l new_username old_username #to change the username
-    usermod -c "New comment" username #to modify comment
-    usermod -g groupname username    
-    usermod -d /path/to/home username
-    ```
-    
-
-  * id: Display user and group information.
-```sh
-        id username
+useradd username # Creates a user with no home directory
 ```
-    
 
-  * groups: List groups a user belongs to.
+**Common Flags for `useradd`**  
 
-     ```sh
-        groups username
-    ```
+- `-m`: Creates a home directory for the user.  
+- `-d`: Specifies a custom home directory.  
+- `-c`: Adds a comment (e.g., user description).  
+- `-g`: Assigns the user to a group.  
+- `-s`: Specifies the login shell.  
 
-  * userdel: Delete a user account.
-```sh
-        userdel username
- ```   
-
-  * chage: Manage password aging (minimum age, maximum age, warning period).
-
- ```sh 
- chage -l username # Show password aging infomation  for a user
- chage -m 14 -M 90 -W 7 username # Set minimum age (14 days), maximum age (90 days), and warning period (7 days) 
- chage -E year-month-day username #set expiration date 
- ```   
-• Filter the password and group databases:
-
-  Use getent to retrieve information from system databases. For example, getent passwd username retrieves the password entry for a user. 
-```sh
-    getent passwd username
-    getent group groupname 
- ``` 
-  
-
-Group Accounts:
-
-• Creating Groups:
-
-  Use groupadd to create a new group.
+Examples:  
 
 ```sh
-    groupadd groupname
-``` 
+useradd -m username 
+useradd -d /path/to/home username 
+useradd -c "Comment about the user" username 
+useradd -g groupname username 
+useradd -s /path/to/shell username 
+```
 
-• Managing Groups: 
+**2. Managing Users**  
 
-  * groupmod: Modify group attributes (name, etc.).
+- **Change Password**: Use `passwd`.  
+
+  ```sh
+  passwd username
+  passwd -e username # Immediately expires a user's password
+  ```
+
+- **Modify User Attributes**: Use `usermod`.  
+
+  ```sh
+  usermod -l new_username old_username # Change username
+  usermod -c "New comment" username # Modify comment
+  usermod -g groupname username # Change primary group
+  usermod -d /path/to/home username # Change home directory
+  ```
+
+- **Display User Information**: Use `id`.  
+
+  ```sh
+  id username
+  ```
+
+- **List User Groups**: Use `groups`.  
+
+  ```sh
+  groups username
+  ```
+
+- **Delete a User**: Use `userdel`.  
+
+  ```sh
+  userdel username
+  ```
+
+- **Manage Password Aging**: Use `chage`.  
+
+  ```sh
+  chage -l username # Show password aging information
+  chage -m 14 -M 90 -W 7 username # Set minimum (14 days), maximum (90 days), and warning period (7 days)
+  chage -E year-month-day username # Set expiration date
+  ```
+
+**3. Filter System Databases**  
+Use `getent` to retrieve information from system databases.  
+
 ```sh
-        groupmod -n new_group_name groupname
-```    
+getent passwd username # Retrieve user password entry
+getent group groupname # Retrieve group information
+```
 
-  * groupdel: Delete a group.
+#### **Group Accounts**
+
+**1. Creating Groups**  
+Use `groupadd` to create a new group.  
+
 ```sh
-        groupdel groupname
-```    
+groupadd groupname
+```
 
-Related Files:
+**2. Managing Groups**  
 
-• **/etc/passwd:** Stores user account information. This file his 7 colons which contains the **Username, passward, UID, GID, Option comment field, Home directory of user, and User shell**.
+- **Modify Group Attributes**: Use `groupmod`.  
 
-• **/etc/shadow:** Stores encrypted user passwords (for security).This file has 9 field namely **Username, Encrypted password, Date of last password change, Minimum password age, Maximum password age, Password warning period, Password inactivity period, Account expiration date, Reserved field**.
+  ```sh
+  groupmod -n new_group_name groupname
+  ```
 
-• **/etc/group:** Stores group information. This file has 4 fields namely **Group name, Group password, GID, Member list**.
+- **Delete a Group**: Use `groupdel`.  
 
-• /etc/gshadow: Stores encrypted group password. It has 4 field which include **Group Name, Encrypted password, Group administrators, Group members**
+  ```sh
+  groupdel groupname
+  ```
 
-• **/etc/skel:** Template directory copied when creating new users (customizable).
+---
 
-• **/etc/login.defs:** Contains system-wide defaults for user account management, defining settings like password aging, UID/GID ranges, and security options.
+### **Related Files**
 
-Permissions and Ownership:
+- **/etc/passwd**: Stores user account information (Username, Password, UID, GID, Comment, Home Directory, Shell).  
+- **/etc/shadow**: Stores encrypted user passwords and password aging details.  
+- **/etc/group**: Stores group information (Group Name, Password, GID, Member List).  
+- **/etc/gshadow**: Stores encrypted group passwords and group administrators.  
+- **/etc/skel**: Template directory copied when creating new users.  
+- **/etc/login.defs**: Contains system-wide defaults for user account management (e.g., password aging, UID/GID ranges).
 
-• chown: Change the ownership of a file or directory.
+---
 
-    chown username:groupname filename
-  
+### **Permissions and Ownership**
 
-• chgrp: Change the group ownership of a file or directory.
+- **Change Ownership**: Use `chown`.  
 
-    chgrp groupname filename
-  
+  ```sh
+  chown username:groupname filename
+  ```
 
-• chmod: Change file permissions (read, write, execute).
+- **Change Group Ownership**: Use `chgrp`.  
 
-    chmod 755 filename # Owner: read/write/execute, Group: read/execute, Others: read/execute
-  
+  ```sh
+  chgrp groupname filename
+  ```
 
-Security Best Practices:
+- **Change File Permissions**: Use `chmod`.  
 
-• Strong passwords: Enforce complexity policies.
-• Limited permissions: Grant only necessary permissions to users.
-• Account review: Identify unused accounts and disable them.
-• Password rotation: Require users to change passwords regularly.
-• System updates: Patch vulnerabilities promptly.
+  ```sh
+  chmod 755 filename # Owner: read/write/execute, Group: read/execute, Others: read/execute
+  ```
 
-### Commands that do similar task 
-1. passwd and chage
+---
 
-|Passwd Command   |   chage command    |description|
-|-----------------|--------------------|-----------|        
-|   passwd -n              |  chage -m                  |minimum lifetime for passward|
-|  passwd -x               |   chage -M                 |Set the maximum password lifetime for a user account|
-|   passwd -w              |      chage -W              |Set the number of days of warning before the password expires 
-|   passwd -i              |   chage -I                 |Set the number of days of inactivity after a password expires during which the user shouldupdate the password (otherwise the account will be disabled)|
-|  passwd -S               | chage -l                   |show brief information about the password of the user account
+### **Security Best Practices**
 
-2.passwd and usermod
+1. **Strong Passwords**: Enforce complexity policies.  
+2. **Limited Permissions**: Grant only necessary permissions to users.  
+3. **Account Review**: Identify and disable unused accounts.  
+4. **Password Rotation**: Require users to change passwords regularly.  
+5. **System Updates**: Patch vulnerabilities promptly.  
 
-|passwd  |usermod  |description
-|--------|---------|----------|
-| passwd -l                | usermod -L                   |lock a user
-|passwd -u| usermod -U|unlocks a user
-3. useradd and usermod 
+---
 
-|Options    |usermod |useradd       |
-|-----------|--------|--------------| 
-|-e        |  reset expiration date      |set expiration date              | 
-| -s        | change login shell       |   set login shell           | 
-|       -c       | modify comment       | create user with comment             |
-|           -d   |  change user home directory      |set path to user home directory              | 
-|    -g    |change user's primary group       | add user's primary group             |  
-|    -G,-aG      |add user to secondary group or  add by overwriting        | add user to secondary group or  add by overwriting              |  
+## **Commands Comparison**
+
+### **1. `passwd` and `chage`**
+
+| **`passwd` Command** | **`chage` Command** | **Description** |
+|----------------------|---------------------|-----------------|
+| `passwd -n`          | `chage -m`          | Set minimum password lifetime. |
+| `passwd -x`          | `chage -M`          | Set maximum password lifetime. |
+| `passwd -w`          | `chage -W`          | Set warning period before password expires. |
+| `passwd -i`          | `chage -I`          | Set inactivity period after password expiration. |
+| `passwd -S`          | `chage -l`          | Show password aging information. |
+
+### **2. `passwd` and `usermod`**
+
+| **`passwd` Command** | **`usermod` Command** | **Description** |
+|----------------------|-----------------------|-----------------|
+| `passwd -l`          | `usermod -L`          | Lock a user account. |
+| `passwd -u`          | `usermod -U`          | Unlock a user account. |
+
+### **3. `useradd` and `usermod`**
+
+| **Option** | **`usermod`** | **`useradd`** | **Description** |
+|------------|---------------|---------------|-----------------|
+| `-e`       | Reset expiration date | Set expiration date | Manage account expiration. |
+| `-s`       | Change login shell | Set login shell | Specify user shell. |
+| `-c`       | Modify comment | Create user with comment | Add or update user description. |
+| `-d`       | Change home directory | Set home directory | Manage user home directory. |
+| `-g`       | Change primary group | Add primary group | Assign primary group. |
+| `-G`, `-aG` | Add to secondary group | Add to secondary group | Manage secondary group membership. |
+
+---
+
+## **Additional Resources**
+
+1. **Linux Documentation**: Refer to the official Linux man pages for detailed command usage (`man useradd`, `man usermod`, etc.).
+2. **Security Guides**: Explore security best practices from resources like the [CIS Benchmarks](https://www.cisecurity.org/).
+3. **Automation Tools**: Learn about scripting and automation with tools like `cron` and `Ansible`.
+4. **Online Courses**: Platforms like [Linux Academy](https://linuxacademy.com/) and [Coursera](https://www.coursera.org/) offer in-depth Linux administration courses.
