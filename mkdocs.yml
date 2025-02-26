@@ -1,66 +1,71 @@
 # Project information
 site_name: LPIC 1 RESOURCES
 site_description: 'An example MkDocs project using the Material theme'
-site_url: 'https://ICE.io/mk-docs' 
+site_url: 'https://ICE.io/mk-docs'
 
 dev_addr: 0.0.0.0:8000
+
 # Theme settings
 theme:
-  
   name: material
-  features: 
-   - navigation.tabs
-   - navigation.section
-   - navigation.tracking
-   - navigation.expand
-   - navigation.path
-   - navigation.prune
-   - navigation.instant
-   - navigation.instant.progress
-   - navigation.instant.preview
-   - navigation.top
-   - toc.integrate 
-   - toc.follow
-   - search.suggest
-   - search.highlight
-   - search.share
-   - search.related
-   - content.tabs.link
-   - content.code.annotation
-   - content.code.copy
-   - header.autohide
-   
-  theme:
+  features:
+    - navigation.tabs
+    - navigation.section
+    - navigation.tracking
+    - navigation.expand
+    - navigation.path
+    - navigation.prune
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.instant.preview
+    - navigation.top
+    - toc.integrate
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - search.share
+    - search.related
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+    - header.autohide
+
+  # Font settings
   font:
     text: Aref Ruqaa Ink
-  
-
+    code: Roboto Mono
+    # Add more font options for user selection
+    select:
+      - Aref Ruqaa Ink
+      - Roboto
+      - Open Sans
+      - Lora
+      - Merriweather
 
   plugins:
-   - search
-   - tags
-   - blog
-   - privacy
+    - search
+    - tags
+    - blog
+    - privacy
 
   language: en
-  palette: 
-   
-   - scheme: default
-     toggle: 
-       icon: material/weather-night
-       name: switch to dark mode
-     primary: teal
-     accent: purple
-   - scheme: slate
-     toggle: 
-       icon: material/weather-sunny
-       name: switch to light mode
-     primary: teal
-     accent: lime
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+      primary: teal
+      accent: purple
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+      primary: teal
+      accent: lime
 
-# extra links
-  extra:
-    social:
+# Extra links
+extra:
+  social:
     - icon: fontawesome/brands/github
       link: https://github.com/micheal-ndoh
       name: Github
@@ -70,7 +75,7 @@ theme:
     - icon: fontawesome/brands/discord
       link: https://discord.com/users/1128041830760587446
       name: Discord
-    generator: false
+  generator: false
 
 markdown_extensions:
   - pymdownx.highlight:
@@ -79,7 +84,7 @@ markdown_extensions:
   - pymdownx.snippets
   - admonition
   - pymdownx.arithmatex:
-    generic: true
+      generic: true
   - footnotes
   - pymdownx.details
   - pymdownx.superfences
@@ -96,24 +101,24 @@ extra_javascript:
 # Navbar settings (site structure)
 nav:
   - Home: index.md
-  - TOPICS: 
-    - SYSTEM ARCHITECTURE: SYSTEM Architecture.md
-    - VIRTUALIZATION: VIRTUALIZATION.md
-    - LINUX INSTALLATION: Linux Installation and Package Management.md
-    - PACKAGE MANAGEMENT: Package_Management.md
-    - MULTIPASS: Multipass.md
-    - SHELL SCRIPTING: SHELL-SCRIPTING.md
-    - USER MANAGEMENT: USER MANAGEMENT.md
-    - GNU: GNU.md
-    - UNIX COMMANDS: GNU & UNIX commands.md
-    - LOCALIZATION: localization.md
-    - FILE SYSTEMS: File_systems.md
-    - SCHEDULING JOBS: Schedulingjobs.md
+  - TOPICS:
+      - SYSTEM ARCHITECTURE: SYSTEM Architecture.md
+      - VIRTUALIZATION: VIRTUALIZATION.md
+      - LINUX INSTALLATION: Linux Installation and Package Management.md
+      - PACKAGE MANAGEMENT: Package_Management.md
+      - MULTIPASS: Multipass.md
+      - SHELL SCRIPTING: SHELL-SCRIPTING.md
+      - USER MANAGEMENT: USER MANAGEMENT.md
+      - GNU: GNU.md
+      - UNIX COMMANDS: GNU & UNIX commands.md
+      - LOCALIZATION: localization.md
+      - FILE SYSTEMS: File_systems.md
+      - SCHEDULING JOBS: Schedulingjobs.md
   - USEFUL COMMANDS: Commands.md
   - About: about.md
 
 extra:
-  analytics: 
+  analytics:
     feedback:
       title: Was this page helpful?
       ratings:
@@ -125,20 +130,17 @@ extra:
         - icon: material/heart-broken
           name: This page could be improved
           data: 0
-          note: >- 
+          note: >-
             Thanks for your feedback! Help us improve this page by
-            using our <a href="..." target="_blank" rel="noopener">feedback form</a>. 
+            using our <a href="..." target="_blank" rel="noopener">feedback form</a>.
 
-
-extra:
   consent:
     title: Cookie consent
-    description: >- 
+    description: >-
       We use cookies to recognize your repeated visits and preferences, as well
       as to measure the effectiveness of our documentation and whether users
       find what they're searching for. With your consent, you're helping us to
       make our documentation better.
-      extra:
     actions:
       - accept
       - reject
@@ -155,7 +157,7 @@ markdown_extensions:
 repo_name: MICHEAL's
 repo_url: https://github.com/micheal-ndoh/MK_DOCS.git
 edit_uri: edit/main/docs/
-repo: fontawesome/brands/git-alt 
+repo: fontawesome/brands/git-alt
 
 copyright: >
   Copyright &copy; 2024 MICHEAL NDOH –
