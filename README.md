@@ -1,3 +1,5 @@
+[![.github/workflows/publish.yml](https://github.com/micheal-ndoh/MK_DOCS/actions/workflows/publish.yml/badge.svg)](https://github.com/micheal-ndoh/MK_DOCS/actions/workflows/publish.yml)
+
 # **My MkDocs Project**
 
 Welcome to the source files repository for my MkDocs documentation project, utilizing the [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) theme. This project is designed to create clean, responsive, and professional documentation.
