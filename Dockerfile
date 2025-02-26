@@ -1,17 +1,14 @@
-FROM python:3.9-alpine AS builder
+FROM python:3.9-slim
 
-RUN apk add --no-cache nginx && \
-    pip install --no-cache-dir mkdocs mkdocs-material
+WORKDIR /app
 
-WORKDIR /docs
+COPY requirements.txt .
+
+RUN pip install --no-cache-dir -r requirements.txt
+
 COPY . .
-RUN mkdocs build && \
-    rm -rf /docs/docs /docs/mkdocs.yml
 
-FROM nginx:alpine
+EXPOSE 5000
 
-COPY --from=builder /docs/site /usr/share/nginx/html
-COPY --from=builder /etc/nginx/nginx.conf /etc/nginx/nginx.conf
+CMD ["python", "app.py", "--host=0.0.0.0"]
 
-EXPOSE 80
-CMD ["nginx", "-g", "daemon off;"]
