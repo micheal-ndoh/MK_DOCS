@@ -44,10 +44,10 @@ The LPIC 1 certification covers the following key areas:
 
 ## **Why Choose LPIC 1?**
 
-- **Industry Recognition**: LPIC 1 is globally recognized and respected by employers.
-- **Career Advancement**: Opens doors to roles such as Linux Administrator, System Engineer, and DevOps Engineer.
-- **Skill Validation**: Demonstrates your proficiency in Linux system administration.
-
+* **Industry Recognition**: LPIC 1 is globally recognized and respected by employers.
+* **Career Advancement**: Opens doors to roles such as Linux Administrator, System Engineer, and DevOps Engineer.
+* **Skill Validation**: Demonstrates your proficiency in Linux system administration.
+  
 ---
 
 ## **Tips for Success**
