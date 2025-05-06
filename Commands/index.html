@@ -1,0 +1,1451 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="An example MkDocs project using the Material theme">
+      
+      
+      
+        <link rel="canonical" href="https://LPIC-1-RESOURCES/Commands/">
+      
+      
+        <link rel="prev" href="../Schedulingjobs/">
+      
+      
+        <link rel="next" href="../about/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+    
+    
+      
+        <title>USEFUL COMMANDS - LPIC 1 RESOURCES</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.2afb09e1.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aref+Ruqaa+Ink:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Aref Ruqaa Ink";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#system-architecture" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="LPIC 1 RESOURCES" class="md-header__button md-logo" aria-label="LPIC 1 RESOURCES" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            LPIC 1 RESOURCES
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              USEFUL COMMANDS
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="purple" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/micheal-ndoh/MK_DOCS.git" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    MICHEAL's
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../SYSTEM%20Architecture/" class="md-tabs__link">
+          
+  
+  
+  TOPICS
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  USEFUL COMMANDS
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../about/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  About
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="LPIC 1 RESOURCES" class="md-nav__button md-logo" aria-label="LPIC 1 RESOURCES" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    LPIC 1 RESOURCES
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/micheal-ndoh/MK_DOCS.git" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    MICHEAL's
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../SYSTEM%20Architecture/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    TOPICS
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    USEFUL COMMANDS
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    USEFUL COMMANDS
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#shutdown" class="md-nav__link">
+    <span class="md-ellipsis">
+      shutdown
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="shutdown">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flags-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flags (Options):
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dmesg" class="md-nav__link">
+    <span class="md-ellipsis">
+      dmesg
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="dmesg">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flags-and-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flags and Options:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flags" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flags:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flags_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flags:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lspci" class="md-nav__link">
+    <span class="md-ellipsis">
+      lspci
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="lspci">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flags_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flags:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<hr />
+<p>tags:
+  - LINUX INSTALLATION AND PACKAGE MANAGEMENT
+  - ADMINISTRATIVE TASKS
+  - ESSENTIAL SYSTEM SERVICES</p>
+<hr />
+<p>...</p>
+<h1 id="system-architecture">SYSTEM ARCHITECTURE<a class="headerlink" href="#system-architecture" title="Permanent link">&para;</a></h1>
+<h3 id="shutdown"><code>shutdown</code><a class="headerlink" href="#shutdown" title="Permanent link">&para;</a></h3>
+<p>command in Linux is used to halt, power off, or reboot the system. It provides various options to schedule shutdowns, broadcast messages, and cancel scheduled actions.</p>
+<p>Basic Syntax: shutdown [OPTION] [TIME] [MESSAGE]</p>
+<h4 id="flags-options">Flags (Options):<a class="headerlink" href="#flags-options" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>-r or --reboot</code>: Reboot the system after shutdown.</li>
+<li><code>-h or --halt</code>: Halt the system (power off) after .</li>
+<li><code>-P or --poweroff</code>: Power off the system immediately (no delay).</li>
+<li><code>-c or --cancel</code>: Cancel a scheduled shutdown.</li>
+<li><code>+m or --delay=m</code>: Schedule shutdown after m minutes from now.</li>
+<li><code>hh:mm or --time=hh:mm</code>: Schedule shutdown at a specific time (24-hour format).</li>
+</ul>
+<h3 id="dmesg"><code>dmesg</code><a class="headerlink" href="#dmesg" title="Permanent link">&para;</a></h3>
+<p>command in Linux displays the kernel ring buffer, which contains messages generated by the kernel during system boot and operation. These messages provide valuable information for troubleshooting and debugging system issues.</p>
+<h4 id="flags-and-options">Flags and Options:<a class="headerlink" href="#flags-and-options" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>-C, --clear</code>: Clears the ring buffer, removing all existing messages.</li>
+<li><code>-c, --read-clear</code>: Prints the current contents of the ring buffer and then clears it.</li>
+<li><code>-f, --facility</code>: Restricts output to a specific facility (e.g., kernel, device, or module).</li>
+<li><code>-H, --human</code>: Enables human-readable timestamps and pipes output to a pager (less).</li>
+<li><code>-L, --level</code>: Restricts output to a specific log level (e.g., error, warning, or info).</li>
+</ul>
+<p>### <code>rmmod</code>
+rmmod is used to remove or unload a kernel module from the system.</p>
+<h4 id="flags">Flags:<a class="headerlink" href="#flags" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>-s</code> : Specify the module name or device file to unload (e.g., rmmod -s bluetooth).</li>
+<li><code>-f</code> :  Force the removal of the module, even if it’s still in use (use with caution).</li>
+<li><code>-v</code> : Verbose mode, providing more detailed information about the removal process.</li>
+<li><code>-w, --Wait</code> : isolate a module that is in use and wait until it is no longer in use before removing.</li>
+<li><code>-s, --syslog</code> : send errors to the syslog (syetem log) instead of sending to standard error.
+ Example: 
+rmmod -s bluetooth
+ removes the Bluetooth module.</li>
+</ul>
+<p>### <code>modprobe</code>
+<strong>Purpose</strong> : modprobe is used to load or unload kernel modules.</p>
+<h4 id="flags_1">Flags:<a class="headerlink" href="#flags_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>-r</code> : Remove the specified module (equivalent to rmmod).</li>
+<li><code>-a</code> : Auto-load modules specified in /etc/modules or /etc/modprobe.d/*.conf files.</li>
+<li><code>-q</code> : Quiet mode, suppressing error messages.</li>
+<li><code>-v</code> : Verbose mode, providing more detailed information about the loading or unloading process.</li>
+<li><code>-t</code> : Test mode, simulating the loading or unloading of a module without actually doing so.
+Example: modprobe -r bluetooth removes the Bluetooth module.</li>
+</ul>
+<h3 id="lspci"><code>lspci</code><a class="headerlink" href="#lspci" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose</strong> : lspci is used to list and gather information about PCI buses and devices.</p>
+<h4 id="flags_2">Flags:<a class="headerlink" href="#flags_2" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>-t</code> : Tree-like output, showing the hierarchical structure of PCI devices.</li>
+<li><code>-v</code> : Verbose mode, providing detailed information about each device.</li>
+<li><code>-vv</code> : More verbose mode, including configuration registers and interrupt lines.</li>
+<li><code>-vvv</code>: Extremely verbose mode, including low-level details.</li>
+<li><code>-m</code> : Machine-readable output, suitable for scripting or processing.</li>
+</ul>
+<h1 id="linux-installation-and-package-management">LINUX INSTALLATION AND PACKAGE MANAGEMENT<a class="headerlink" href="#linux-installation-and-package-management" title="Permanent link">&para;</a></h1>
+<h3 id="dpkg"><code>dpkg</code><a class="headerlink" href="#dpkg" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose</strong> : package manager for Debian</p>
+<h4 id="flags_3">Flags:<a class="headerlink" href="#flags_3" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>-i</code> : Install a package (e.g., dpkg -i package.deb)</li>
+<li><code>-r</code> : Remove a package (e.g., dpkg -r package)</li>
+<li><code>-L</code> : List the contents of an installed package (e.g., dpkg -L package)</li>
+<li><code>-S</code> : Search for a file belonging to a package (e.g., dpkg -S /path/to/file)</li>
+<li><code>--contents</code> : Show the contents of a package file (e.g., dpkg --contents package.deb)</li>
+<li><code>--install</code> : Install a package with options (e.g., dpkg --install --force-overwrite package.deb)</li>
+</ul>
+<h3 id="apt"><code>apt</code><a class="headerlink" href="#apt" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose</strong> : package manager for Debian</p>
+<h4 id="flags_4">Flags:<a class="headerlink" href="#flags_4" title="Permanent link">&para;</a></h4>
+<p><code>-f</code> : Force installation or removal of a package (e.g., apt install -f package)
+<code>-o</code> : Override configuration options (e.g., apt install -o APT::Get::Force-Yes=true package)
+<code>-q</code> : Quiet mode (e.g., apt install -q package)
+<code>-s`` : Simulation mode (e.g., apt install -s package)</code>-y<code>: Assume yes to prompts (e.g., apt install -y package)</code>--fix-broken``` : Fix broken dependencies (e.g., apt install --fix-broken)</p>
+<h3 id="yum"><code>yum</code><a class="headerlink" href="#yum" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose</strong> : Package management system for RPM-based Linux distributions, such as Red Hat Enterprise Linux (RHEL), CentOS, and Fedora.</p>
+<h4 id="flags_5">Flags:<a class="headerlink" href="#flags_5" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>-y</code> : Assume yes to prompts (e.g., yum install -y package)</li>
+<li><code>-q</code> : Quiet mode (e.g., yum install -q package)</li>
+<li><code>--skip-broken</code> : Skip packages with broken dependencies (e.g., yum install --skip-broken package)</li>
+<li><code>--enablerepo</code> : Enable a specific repository (e.g., yum install --enablerepo=epel package)</li>
+<li><code>--disablerepo</code> : Disable a specific repository (e.g., yum install --disablerepo=epel package)</li>
+<li><code>--setopt</code> : Set a configuration option (e.g., yum install --setopt=tsflags=nodocs package)</li>
+</ul>
+<h3 id="dnf"><code>dnf</code><a class="headerlink" href="#dnf" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose</strong> : Next-generation package manager for RPM-based Linux distributions, replacing YUM as the default package manager in Fedora and other RHEL-based systems.</p>
+<h4 id="flags_6">Flags:<a class="headerlink" href="#flags_6" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>-y</code> : Assume yes to prompts (e.g., dnf install -y package)</li>
+<li><code>-q</code> : Quiet mode (e.g., dnf install -q package)</li>
+<li><code>--skip-broken</code> : Skip packages with broken dependencies (e.g., dnf install --skip-broken package)</li>
+<li><code>--enablerepo</code> : Enable a specific repository (e.g., dnf install --enablerepo=epel package)</li>
+<li><code>--disablerepo</code> : Disable a specific repository (e.g., dnf install --disablerepo=epel package)</li>
+<li><code>--allow-erasing</code> : Allow erasing of installed packages to resolve dependencies (e.g., dnf install --allow-erasing package)</li>
+</ul>
+<h3 id="zypper"><code>zypper</code><a class="headerlink" href="#zypper" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose</strong> : Package manager for openSUSE and SUSE Linux Enterprise distributions, as well as other RPM-based systems.</p>
+<h4 id="flags_7">Flags:<a class="headerlink" href="#flags_7" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>-n</code> : Non-interactive mode (e.g., zypper install -n package)</li>
+<li><code>-q</code> : Quiet mode (e.g., zypper install -q package)</li>
+<li><code>--force</code> : Force installation or removal of a package (e.g., zypper install --force package)</li>
+<li><code>--clean</code> : Clean up package cache (e.g., zypper clean)</li>
+<li><code>--refresh</code> : Refresh package metadata (e.g., zypper refresh)</li>
+<li><code>--from</code> : Specify a repository to install from (e.g., zypper install --from=home:username:repo package)</li>
+</ul>
+<h1 id="gnu-and-unix-commands">GNU AND UNIX COMMANDS<a class="headerlink" href="#gnu-and-unix-commands" title="Permanent link">&para;</a></h1>
+<h3 id="rm-remove"><code>rm</code> (Remove)<a class="headerlink" href="#rm-remove" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose</strong>: Delete files and directories</p>
+<h4 id="flags_8">Flags:<a class="headerlink" href="#flags_8" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>-i</code>: Interactive mode, prompting for confirmation before deleting each file.</li>
+<li><code>-r</code>: Recursive deletion, removing directories and their contents.</li>
+<li><code>-f</code>: Force deletion, skipping prompts and errors.</li>
+<li><code>-v</code>: Verbose mode, displaying file names as they are deleted.</li>
+<li><code>-d</code>: Delete directories only, without prompting for confirmation.
+Example: rm -r /path/to/directory deletes the directory and its contents recursively</li>
+</ul>
+<h3 id="ls-list"><code>ls</code> (List)<a class="headerlink" href="#ls-list" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Display file and directory information</p>
+<p>Flags:</p>
+<ul>
+<li><code>-l</code>: Long format, displaying detailed file information.</li>
+<li><code>-a</code>: Show all files, including hidden ones.</li>
+<li><code>-t</code>: Sort files by time, with newest first.</li>
+<li><code>-r</code>: Recursively list directory contents.</li>
+<li><code>-d</code>: List directories only, without listing their contents.
+Example: ls -l /path/to/directory shows detailed information about files and directories in the specified path</li>
+</ul>
+<h3 id="uname-unix-name"><code>uname</code> (Unix Name)<a class="headerlink" href="#uname-unix-name" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose</strong>: Display system information</p>
+<p>Flags:</p>
+<ul>
+<li><code>-a or --all</code>: Display all system information, including kernel version, OS, and hardware architecture.</li>
+<li><code>-m or --nodename</code>: Display the network name of the machine.</li>
+<li><code>-n or --hostname</code>: Display the hostname of the machine.</li>
+<li><code>-r or --release</code>: Display the kernel release version.</li>
+<li><code>-s or --sysname</code>: Display the operating system name.
+Example: uname -a displays all system information</li>
+</ul>
+<h3 id="kill"><code>kill</code><a class="headerlink" href="#kill" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Send a signal to terminate a process</p>
+<p>Flags:</p>
+<ul>
+<li><code>-9 (SIGKILL)</code>: Send a SIGKILL signal to terminate a process immediately</li>
+<li><code>-15 (SIGTERM)</code>: Send a SIGTERM signal to terminate a process gracefully</li>
+<li><code>-HUP (SIGHUP)</code>: Send a SIGHUP signal to restart a process</li>
+<li><code>-INT (SIGINT)</code>: Send a SIGINT signal to interrupt a process</li>
+<li><code>-USR1 (SIGUSR1)</code>: Send a SIGUSR1 signal to a process
+Example: kill -9 <process_id> terminates a process immediately</li>
+</ul>
+<h3 id="job"><code>job</code><a class="headerlink" href="#job" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Manage jobs (background processes) in the shell</p>
+<p>Flags:</p>
+<ul>
+<li><code>-l (list)</code>: List all jobs</li>
+<li><code>-r (remove)</code>: Remove a job by its job number</li>
+<li><code>-s (suspend)</code>: Suspend a job</li>
+<li><code>-t (terminate)</code>: Terminate a job</li>
+<li><code>-x (exit)</code>: Exit a job
+Example: job -l lists all running jobs</li>
+</ul>
+<h1 id="devices-linux-filesystems-filesystem-hierarchy-standard">Devices, Linux Filesystems, Filesystem Hierarchy Standard<a class="headerlink" href="#devices-linux-filesystems-filesystem-hierarchy-standard" title="Permanent link">&para;</a></h1>
+<h3 id="lsblk"><code>lsblk</code><a class="headerlink" href="#lsblk" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose</strong>: lists information about all available or the specified block devices.</p>
+<h4 id="flags_9">Flags:<a class="headerlink" href="#flags_9" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>-a, --all</code>: Also list empty devices and RAM disk devices.</li>
+<li><code>-b, --bytes</code>: Print the SIZE column in bytes rather than in a human-readable format.</li>
+<li><code>-f, --fs</code>: Output info about filesystems.</li>
+<li><code>-l, --list</code>: Produce output in the form of a list.</li>
+<li><code>-p, --paths</code>: Print full device paths.</li>
+</ul>
+<h3 id="mkfs"><code>mkfs</code><a class="headerlink" href="#mkfs" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> is used to build a Linux filesystem on a device, usually a hard disk partition.</p>
+<h4 id="flags_10">Flags:<a class="headerlink" href="#flags_10" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>-t, --type</code> : Specify the type of filesystem to be built. If not specified, the default filesystem type (ext2) is used.</li>
+<li><code>-F</code>: Force the creation of a filesystem on the target device even if a filesystem is detected on it.</li>
+<li><code>-c</code> : Checks the target device for bad blocks before creating the filesystem.</li>
+<li><code>-n</code> : This is a truly useful option that simulates the creation of the filesystem, and displays what
+would be done if executed without the n option.</li>
+<li><code>-q</code> : Quiet mode. mke2fs will run normally, but will not produce any output to the terminal.</li>
+</ul>
+<h3 id="du"><code>du</code><a class="headerlink" href="#du" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose</strong>: estimate file space usage.</p>
+<h4 id="flags_11">Flags:<a class="headerlink" href="#flags_11" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>-a, --all</code> : write counts for all files, not just directories.</li>
+<li><code>-h, --human-readable</code> : print sizes in human readable format (e.g., 1K 234M 2G)</li>
+<li><code>-c, --total</code> : produce a grand total.</li>
+<li><code>-S, --separate-dirs</code> : for directories do not include size of subdirectories.</li>
+<li><code>--inodes</code> : list inode usage information instead of block usage.</li>
+</ul>
+<h3 id="df"><code>df</code><a class="headerlink" href="#df" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose</strong>: displays the amount of disk space available on the already mounted file systems.</p>
+<h4 id="flags_12">Flags:<a class="headerlink" href="#flags_12" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>-a, --all</code>: includes all file systems even inaccessible ones.</li>
+<li><code>-i, --inodes</code>: list inode information instead of block usage</li>
+<li><code>-h, --human-readable</code>: print sizes in human readable format.</li>
+<li><code>-t, --type=TYPE</code>: limit listing to file systems of type TYPE.</li>
+<li><code>-T, --print-type</code> :     print file system type.</li>
+</ul>
+<h3 id="mount"><code>mount</code><a class="headerlink" href="#mount" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose</strong> : mount a filesystem.</p>
+<p>Flag:</p>
+<ul>
+<li><code>-a</code>: Mounts all file systems listed in /etc/fstab.</li>
+<li><code>-l</code> : Lists all the file systems mounted and adds labels to each device.</li>
+<li><code>-r</code> : Mounts the file system in read-only mode.</li>
+<li><code>-t</code> : Indicates the file system type.</li>
+<li><code>-v</code> : Mounts verbosely, describing each operation.</li>
+</ul>
+<p>## SHELL AND SHELL SCRIPTING</p>
+<ol>
+<li>
+<h3 id="source-or-execute-commands-from-a-file"><code>source</code> (or .) - Execute Commands from a File.<a class="headerlink" href="#source-or-execute-commands-from-a-file" title="Permanent link">&para;</a></h3>
+</li>
+</ol>
+<p>The source command (or .) is used to execute commands from a file in the current shell session. It is commonly used to load shell scripts or configurations.
+ <em>Flags</em>:</p>
+<p>&lt; <strong>filename</strong> &gt;: Specifies the file to source and execute in the current shell.</p>
+<ul>
+<li><code>-</code>: Negates the effect of an alias (if used with a command).</li>
+<li><code>-x</code>: Enables a trace of   </li>
+<li><code>-v</code> : Prints each command before executing it (similar to -x, but without showing expanded arguments).</li>
+<li><code>-c</code> : Executes commands given as an argument, but in a new shell.</li>
+</ul>
+<p>Example:</p>
+<p>source ~/.bashrc  # Loads the user's bash configuration file</p>
+<ol>
+<li>
+<h3 id="env-display-or-set-environment-variables"><code>env</code> - Display or Set Environment Variables<a class="headerlink" href="#env-display-or-set-environment-variables" title="Permanent link">&para;</a></h3>
+</li>
+</ol>
+<p>The env command is used to display or set environment variables temporarily.
+        <em>Flags</em>: 
+  - <code>-i</code>: Starts with a completely clean environment (no inherited variables).</p>
+<ul>
+<li>
+<p><code>&lt;VAR=value&gt;</code>: Temporarily sets an environment variable for the command that follows.</p>
+</li>
+<li>
+<p><code>-u</code>: Unsets an environment variable (e.g., env -u VAR).
+        <code>-0</code>: Use null characters instead of newlines when displaying environment variables (useful for script processing).</p>
+</li>
+<li>
+<p><code>-</code>: Lists all the environment variables.</p>
+</li>
+</ul>
+<p>Example:</p>
+<p>env VAR=value command  # Temporarily set VAR for command execution</p>
+<ol>
+<li>
+<h3 id="set-set-or-unset-shell-options-and-positional-parameters"><code>set</code> - Set or Unset Shell Options and Positional Parameters<a class="headerlink" href="#set-set-or-unset-shell-options-and-positional-parameters" title="Permanent link">&para;</a></h3>
+</li>
+</ol>
+<p>The set command is used to set or unset shell options and positional parameters.
+        <em>Flags</em>:
+    - <code>-o</code> option: Sets shell options (e.g., -o nounset to treat unset variables as errors).
+    - <code>+o</code> option: Unsets a shell option.
+    - <code>-x</code>: Enable tracing, which prints commands as they are executed (for debugging).
+    - <code>-e</code>: Exit immediately if a command exits with a non-zero status.
+    - <code>--</code>: End option processing (useful when filenames start with a hyphen).</p>
+<p>Example:
+set -e  # Exit immediately if a command fails</p>
+<ol>
+<li>
+<h3 id="export-set-environment-variables"><code>export</code> - Set Environment Variables<a class="headerlink" href="#export-set-environment-variables" title="Permanent link">&para;</a></h3>
+</li>
+</ol>
+<p>The export command is used to set environment variables, making them available to child processes.
+        <em>Flags</em>:
+    - <code>&lt;VAR=value&gt;</code>: Sets the environment variable VAR to value and exports it.
+    - <code>-p</code>: Displays all environment variables that are marked for export.
+    - <code>&lt;VAR&gt;</code>: Exports an already defined variable without changing its value.
+    - <code>-f</code>: Export functions (in Bash, to make them available in subshells).
+    - <code>--help</code>: Displays help information about the export command.</p>
+<p>Example:</p>
+<p>export PATH="$PATH:/new/path"  # Adds a new directory to PATH</p>
+<ol>
+<li>
+<h3 id="unset-remove-variables-or-functions"><code>unset</code>- Remove Variables or Functions<a class="headerlink" href="#unset-remove-variables-or-functions" title="Permanent link">&para;</a></h3>
+</li>
+</ol>
+<p>The unset command is used to remove variables or functions from the shell environment.
+        <em>Flags</em>:
+    - <code>&lt;VAR&gt;</code>: Unsets a variable, removing it from the shell environment.
+    - <code>-f</code> <function>: Unsets a function definition.
+    - <code>-v</code> <variable>: Unsets a variable (same as without the -v flag).
+    - <code>--help</code>: Displays help information.
+    - <code>--</code>: End option processing for variable names that might start with a dash.</p>
+<p>Example:</p>
+<p>unset VAR  # Removes the variable VAR</p>
+<h2 id="user-interface-and-desktops">User Interface and Desktops<a class="headerlink" href="#user-interface-and-desktops" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<h3 id="xrandr-configure-and-set-display-properties"><code>xrandr</code> - Configure and Set Display Properties<a class="headerlink" href="#xrandr-configure-and-set-display-properties" title="Permanent link">&para;</a></h3>
+</li>
+</ol>
+<p>The xrandr command is used to set screen resolution, rotation, and display layout for X Window System displays.
+        <em>Flags</em>:
+    - ```--output <name>: Specifies the display/output to configure (e.g., --output HDMI-1).
+    - --mode <resolution>: Sets the resolution for the specified display (e.g., --mode 1920x1080).
+    - --rotate <orientation>: Rotates the display (options: normal, left, right, inverted).
+    - --brightness <value>: Adjusts brightness (range from 0.0 to 1.0).
+    - --off: Disables the specified output.</p>
+<p>Example: xrandr --output HDMI-1 --mode 1920x1080 --rotate normal</p>
+<ol>
+<li>
+<h3 id="xdotool-simulate-keyboard-and-mouse-input"><code>xdotool</code> - Simulate Keyboard and Mouse Input<a class="headerlink" href="#xdotool-simulate-keyboard-and-mouse-input" title="Permanent link">&para;</a></h3>
+</li>
+</ol>
+<p>xdotool allows automation of mouse and keyboard actions in X Window System environments. It’s useful for simulating user interactions with the desktop.
+  - key &lt;'keysequence'&gt; : Simulates pressing keys (e.g., xdotool key Ctrl+Alt+T to open a terminal)   </p>
+<ul>
+<li>
+<p>mousemove &lt;'x'&gt; &lt;'y'&gt; Moves the mouse pointer to specified coordinates.</p>
+</li>
+<li>
+<p>click button&gt; :Simulates a mouse click (e.g., click 1 for left-click).</p>
+</li>
+<li>
+<p>type &lt;'text'&gt;: Types out the specified text as if from the keyboard.</p>
+</li>
+<li>
+<p>windowmove &lt; 'window' &gt; &lt;'x'&gt; &lt;'y'&gt;: Moves a window to specific coordinates.</p>
+</li>
+</ul>
+<p>Example: xdotool key Alt+Tab switches between open applications.</p>
+<ol>
+<li>
+<h3 id="gsettings-configure-gnome-settings"><code>gsettings</code> - Configure GNOME Settings<a class="headerlink" href="#gsettings-configure-gnome-settings" title="Permanent link">&para;</a></h3>
+</li>
+</ol>
+<p>The gsettings command is used for configuring GNOME desktop settings and is useful for modifying desktop, window, and appearance configurations.
+        <em>Flags</em>:
+    - <code>get</code> <schema> <key>: Retrieves the current value of a GNOME setting.
+    - <code>set</code> <schema> <key> <value>: Sets a value for a GNOME setting.
+    - <code>list</code>-schemas: Lists all available schemas (i.e., setting categories).
+    - <code>list</code>-keys <schema>: Lists all available keys for a given schema.
+    - <code>reset</code> <schema> <key>: Resets a setting to its default value.</p>
+<p>Example: gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark' changes the GTK theme.</p>
+<ol>
+<li>
+<h3 id="xkill-forcefully-close-a-window"><code>xkill</code> - Forcefully Close a Window<a class="headerlink" href="#xkill-forcefully-close-a-window" title="Permanent link">&para;</a></h3>
+</li>
+</ol>
+<p>xkill is a command used to forcefully close unresponsive windows in X Window environments. It terminates the X server connection to the specified client.
+    - (no flags): Starts xkill in interactive mode, where you click the window you want to kill.
+    - <code>-id</code> <window_id>: Kills a window by specifying its window ID.
+    - <code>-all</code>: Kills all clients (use with caution, as this ends the X session).
+    - <code>-display</code> <display>: Specifies the display on which to run xkill.
+    - <code>--help</code>: Displays help information about the command.</p>
+<p>Example: xkill -id 0x04000007 kills a window by its ID.</p>
+<ol>
+<li>
+<h3 id="wmctrl-interact-with-window-manager"><code>wmctrl</code> - Interact with Window Manager<a class="headerlink" href="#wmctrl-interact-with-window-manager" title="Permanent link">&para;</a></h3>
+</li>
+</ol>
+<p>The wmctrl command is used for controlling windows and interacting with the window manager. This command is useful for managing open windows on the deskto
+        <em>Flags</em>:
+    - <code>-l</code>: Lists all open windows with details such as window ID and title.
+    - <code>-c</code> <window>: Closes a specified window.
+    - <code>-r</code> <window> -e <geometry>: Resizes and moves a window to specified geometry (e.g., 0,100,100,400,300).
+    - <code>-s</code> <workspace>: Switches to a specified workspace.
+    - <code>-a</code> <window>: Activates (focuses) a window with the specified title.</p>
+<p>Example: wmctrl -r "Terminal" -e 0,100,100,800,600 moves and resizes a terminal window.</p>
+<h2 id="networking-fundamentals">NETWORKING FUNDAMENTALS<a class="headerlink" href="#networking-fundamentals" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<h3 id="ping"><code>ping</code><a class="headerlink" href="#ping" title="Permanent link">&para;</a></h3>
+<p>•   Purpose: Tests connectivity between devices by sending ICMP packets.
+<em>Flags</em>:
+- <code>-c</code> [count]: Specify the number of packets to send.
+- <code>-i</code> [interval]: Set the interval between packets (in seconds).
+- <code>-s</code> [size]: Specify the packet size.
+- <code>-t</code> [TTL]: Set Time-to-Live for the packets.
+- <code>-q</code>: Quiet output (only summary).</p>
+</li>
+<li>
+<h3 id="ifconfig-linux-ipconfig-windows"><code>ifconfig</code> (Linux) / ipconfig (Windows)<a class="headerlink" href="#ifconfig-linux-ipconfig-windows" title="Permanent link">&para;</a></h3>
+<p>•   Purpose: Displays or configures network interface settings.
+<em>Flags</em> for ifconfig:
+- <code>up</code>: Activates the network interface.
+- <code>down</code>: Deactivates the network interface.
+- <code>-a</code>: Display all interfaces, even inactive ones.
+- <code>netmask</code> [address]: Set a netmask for the interface.
+- <code>mtu</code> [size]: Set the Maximum Transmission Unit size.</p>
+</li>
+<li>
+<h3 id="netstat"><code>netstat</code><a class="headerlink" href="#netstat" title="Permanent link">&para;</a></h3>
+<p>•   Purpose: Displays network connections, routing tables, and interface statistics.
+ <em>Flags</em>:
+- <code>-a</code>: Show all active connections and listening ports.
+- <code>-n</code>: Show addresses numerically.
+- <code>-r</code>: Display the routing table.
+- <code>-t</code>: Show only TCP connections.
+- <code>-u</code>: Show only UDP connections.</p>
+</li>
+<li>
+<h3 id="traceroute-linux-tracert-windows"><code>traceroute</code> (Linux) / tracert (Windows)<a class="headerlink" href="#traceroute-linux-tracert-windows" title="Permanent link">&para;</a></h3>
+<p>•   Purpose: Shows the path packets take to reach a destination.
+ <em>Flags</em>:
+- <code>-m</code> [max_ttl]: Set the maximum number of hops.
+- <code>-q</code> [queries]: Specify the number of queries per hop.
+- <code>-w</code> [timeout]: Set the timeout per probe.
+- <code>-f</code> [first_ttl]: Set the starting TTL.
+- <code>-I</code>: Use ICMP echo requests instead of UDP packets.</p>
+</li>
+<li>
+<h3 id="nslookup"><code>nslookup</code><a class="headerlink" href="#nslookup" title="Permanent link">&para;</a></h3>
+<p>•   Purpose: Queries DNS to obtain domain name or IP address mapping.
+<em>Flags</em>:
+- <code>-type</code>=[record_type]: Specify the DNS record type (A, MX, NS, etc.).
+- <code>-timeout</code>=[seconds]: Set the timeout for a DNS query.
+- <code>-retry</code>=[attempts]: Number of times to retry a failed query.
+- <code>-debug</code>: Show detailed output of the DNS response.
+- <code>-port</code>=[port]: Specify the DNS server port (default is 53).</p>
+</li>
+</ol>
+<h1 id="security">SECURITY<a class="headerlink" href="#security" title="Permanent link">&para;</a></h1>
+<ol>
+<li>
+<h3 id="ssh-secure-shell"><code>ssh</code> (Secure Shell)<a class="headerlink" href="#ssh-secure-shell" title="Permanent link">&para;</a></h3>
+<p>•   Purpose: Establishes a secure connection to a remote machine.
+    <em>Flags</em>:
+- <code>-p [port]</code>: Specify the port to connect to.
+- <code>-i [identity_file]</code>: Specify the identity file (private key) for authentication.
+- <code>-C</code>: Enable compression to speed up data transfer.
+- <code>-v</code>: Enable verbose mode for debugging.
+- <code>-L [local_port:remote_host:remote_port]</code>: Set up port forwarding.</p>
+</li>
+<li>
+<h3 id="iptables-linux-firewall"><code>iptables</code> (Linux firewall)<a class="headerlink" href="#iptables-linux-firewall" title="Permanent link">&para;</a></h3>
+<p>•   Purpose: Configures rules for traffic filtering and network packet control.
+<em>Flags</em>:
+- <code>-A [chain]</code>: Append a rule to a specified chain (INPUT, OUTPUT, FORWARD).
+- <code>-D [chain]</code>: Delete a rule from a specified chain.
+- <code>-I [chain] [rule_number]</code>: Insert a rule at a specific position in a chain.
+- <code>-j [target]</code>: : Specify the target action (ACCEPT, DROP, REJECT).
+    - <code>-s</code> [source]: Specify the source IP address.</p>
+</li>
+<li>
+<h3 id="openssl"><code>openssl</code><a class="headerlink" href="#openssl" title="Permanent link">&para;</a></h3>
+<p>•   Purpose: Manages SSL/TLS encryption, creates keys, certificates, and performs cryptographic operations.
+    <em>Flags</em>:
+- <code>genrsa</code>: Generate an RSA private key.
+- <code>req -new</code>: Create a new certificate signing request (CSR).
+    - <code>x509 -in [file]</code>: Convert a certificate to X.509 format.
+    - <code>-aes256</code>: Specify AES-256 encryption for key generation.
+    - <code>-verify</code>: Verify an SSL certificate.</p>
+</li>
+<li>
+<h3 id="nmap-network-mapper"><code>nmap</code> (Network Mapper)<a class="headerlink" href="#nmap-network-mapper" title="Permanent link">&para;</a></h3>
+<p>•   Purpose: Scans networks for open ports and services; useful for vulnerability assessment.
+• #### Flags:
+    - <code>-sS</code>: Perform a stealth (SYN) scan.
+    - <code>-p</code> [port_range]: Specify a range of ports to scan.
+    - <code>-O</code>: Detect the operating system of the target.
+    - <code>-A</code>: Enable OS detection, version detection, script scanning, and traceroute.
+    - <code>-v</code>: Enable verbose output.</p>
+</li>
+<li>
+<h3 id="chmodchange-mode"><code>chmod</code>(Change Mode)<a class="headerlink" href="#chmodchange-mode" title="Permanent link">&para;</a></h3>
+<p>•   Purpose: Modifies file and directory permissions, enhancing file security.
+<em>Flags</em>:
+    - <code>-R</code>: Apply permissions recursively to all files and directories.
+    - <code>+x</code>: Add execute permissions.
+    - <code>+w</code>: Add write permissions.
+    - <code>+r</code>: Add read permissions.
+    - <code>--reference=[file]</code>: Use another file’s permissions as a reference.</p>
+</li>
+</ol>
+<h1 id="administrative-tasks">ADMINISTRATIVE TASKS<a class="headerlink" href="#administrative-tasks" title="Permanent link">&para;</a></h1>
+<ol>
+<li>
+<h3 id="ps-process-status"><code>ps</code> (Process Status)<a class="headerlink" href="#ps-process-status" title="Permanent link">&para;</a></h3>
+<p>•   Purpose: Displays information about active processes.
+   <em>Flags</em>:
+    - <code>-e</code>: Show all processes.
+    - <code>-f</code>: Full-format listing with more details.
+- <code>-u [user]</code>: Show processes for a specific user.
+    - <code>-aux</code>: Show all processes from all users, including root.
+    - <code>-o [format]</code>: Specify output format (e.g., pid, user, %cpu).</p>
+</li>
+<li>
+<h3 id="top"><code>top</code><a class="headerlink" href="#top" title="Permanent link">&para;</a></h3>
+<p>•   Purpose: Real-time display of active processes and resource usage.
+ <em>Flags</em>:
+     - <code>-d</code> [seconds]: Set the delay between screen updates.
+     - <code>-u</code> [user]: Show processes for a specific user.
+     - <code>-p</code> [pid]: Monitor a specific process by PID.
+     - <code>-n</code> [count]: Specify the number of updates before exiting.
+     - <code>-b</code>: Batch mode for non-interactive output (good for logging).</p>
+</li>
+<li>
+<h3 id="kill_1"><code>kill</code><a class="headerlink" href="#kill_1" title="Permanent link">&para;</a></h3>
+<p>•   Purpose: Terminates processes by PID.
+ <em>Flags</em>:
+    - <code>-9</code>: Forcefully kill a process (SIGKILL).
+    - <code>-15</code>: Gracefully terminate a process (SIGTERM, default).
+    - <code>-l</code>: List all available signal types.
+    -  <code>-s</code> [signal]: Specify a signal to send to the process.
+    -  <code>-p</code>: Print the process ID without sending a signal.</p>
+</li>
+<li>
+<h3 id="systemctl-system-control"><code>systemctl</code> (System Control)<a class="headerlink" href="#systemctl-system-control" title="Permanent link">&para;</a></h3>
+<p>•   Purpose: Controls and manages system services and units.
+   <em>Flags</em>:
+- <code>start [service]</code>: Start a specified service.
+- <code>stop [service]</code>: Stop a specified service.
+- <code>restart [service]</code>: Restart a specified service.
+- <code>status [service]</code>: Show the status of a specified service.
+- <code>enable [service]</code>: Enable a service to start on boot.</p>
+</li>
+<li>
+<h3 id="crontab"><code>crontab</code><a class="headerlink" href="#crontab" title="Permanent link">&para;</a></h3>
+<p>•   Purpose: Schedules recurring tasks or jobs.
+  <em>Flags</em> :
+    - <code>-e</code>: Edit the current user’s cron jobs.
+- <code>-l</code>: List all cron jobs for the current user.
+- <code>-r</code>: Remove all cron jobs for the current user.
+- <code>-u</code> [user]: Specify a user for which to list, edit, or remove jobs (requires sudo).
+- <code>-i</code>: Prompt before deleting the user’s cron jobs.</p>
+</li>
+</ol>
+<p># ESSENTIAL SYSTEM SERVICES</p>
+<ol>
+<li>
+<h2 id="systemctl-systemd-control"><code>systemctl</code> (Systemd Control)<a class="headerlink" href="#systemctl-systemd-control" title="Permanent link">&para;</a></h2>
+<p>•   Purpose: Controls and manages services and units in systems using systemd.
+<em>Flags</em>:
+- <code>start [service]</code>: Start a specified service.
+- <code>stop [service]</code>: Stop a specified service.
+- <code>restart [service]</code>: Restart a specified service.
+- <code>status [service]</code>: Show the status of a specified service.
+- <code>enable [service]</code>: Enable a service to start at boot.</p>
+</li>
+<li>
+<h2 id="service-legacy-service-management"><code>service</code> (Legacy Service Management)<a class="headerlink" href="#service-legacy-service-management" title="Permanent link">&para;</a></h2>
+<p>•   Purpose: Starts, stops, or restarts services, mainly used on older Linux systems.
+   <em>Flags</em>:
+- <code>start [service]</code>: Start a specified service.
+- <code>stop [service]</code>: Stop a specified service.
+- <code>restart [service]</code>: Restart a specified service.
+- <code>status [service]</code>: Show the status of a specified service.
+- <code>reload [service]</code>: Reload the configuration of a running service.</p>
+</li>
+<li>
+<h3 id="journalctl-systemd-journal"><code>journalctl</code> (Systemd Journal)<a class="headerlink" href="#journalctl-systemd-journal" title="Permanent link">&para;</a></h3>
+<p>•   Purpose: Views and manages logs created by systemd’s journaling service.
+  <em>Flags</em>:
+- <code>-u [service]</code>: Show logs for a specific service.
+- <code>-f</code>: Follow log output in real time.
+- <code>-p [priority]</code>: Filter logs by priority (e.g., err, warn, info).
+- <code>--since [time]</code>: Display logs since a specific time.
+- <code>--until [time]</code>: Display logs until a specific time.</p>
+</li>
+<li>
+<h3 id="chkconfig-service-configuration"><code>chkconfig</code> (Service Configuration)<a class="headerlink" href="#chkconfig-service-configuration" title="Permanent link">&para;</a></h3>
+<p>•   Purpose: Manages runlevel settings for services on older Linux systems.
+<em>Flags</em>:
+    - <code>--list</code>: List all services and their runlevel settings.
+    - <code>--add [service]</code>: Add a service to chkconfig management.
+    - <code>--del [service]</code>: Remove a service from chkconfig management.
+    - <code>--level [levels]</code>: Specify runlevels for the service.
+    - <code>[service] on|off</code>: Enable or disable a service at boot.</p>
+</li>
+<li>
+<h3 id="update-rcd-service-runlevel-management"><code>update-rc.d</code> (Service Runlevel Management)<a class="headerlink" href="#update-rcd-service-runlevel-management" title="Permanent link">&para;</a></h3>
+<p>•   Purpose: Configures service start and stop behavior on Debian-based systems.
+<em>Flags</em>:
+- <code>defaults</code>: Enable default start and stop links for a service.
+- <code>remove</code>: Remove a service from the startup list.
+- <code>[service]</code> disable: Disable a specified service.
+- <code>[service] enable</code>: Enable a specified service.
+    - <code>[service] start [level]</code>: Start the service at a specified runlevel.</p>
+</li>
+<li>
+<h3 id="crontab-cron-job-scheduler"><code>crontab</code> (Cron Job Scheduler)<a class="headerlink" href="#crontab-cron-job-scheduler" title="Permanent link">&para;</a></h3>
+</li>
+</ol>
+<p>•   Purpose: Schedules recurring tasks or jobs on the system.
+    <em>Flags</em>:</p>
+<ul>
+<li>
+<p><code>-e</code>: Edit the cron jobs for the current user.</p>
+<ul>
+<li><code>-l</code>: List all cron jobs for the current user.</li>
+<li><code>-r</code>: Remove all cron jobs for the current user.</li>
+<li><code>-u</code> [user]: Specify a user to manage cron jobs for (requires sudo).  <ul>
+<li><code>-i</code>: Prompt before deleting cron jobs.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<h3 id="netstat-network-statistics"><code>netstat</code> (Network Statistics)<a class="headerlink" href="#netstat-network-statistics" title="Permanent link">&para;</a></h3>
+</li>
+</ul>
+<p>•   Purpose: Displays network connections, routing tables, and network interface statistics.
+    <em>Flags</em>:
+    - <code>-a</code>: Show all active connections and listening ports.
+    - <code>-t</code>: Display only TCP connections.
+    - <code>-u</code>: Display only UDP connections.
+    - <code>-l</code>: Show only listening ports.
+    - <code>-p</code>: Show PID and program name associated with each connection.</p>
+<ol>
+<li>
+<h3 id="ntpdate-network-time-protocol"><code>ntpdate</code> (Network Time Protocol)<a class="headerlink" href="#ntpdate-network-time-protocol" title="Permanent link">&para;</a></h3>
+<p>•   Purpose: Synchronizes the system clock with NTP servers.
+  <em>Flags</em>:
+- <code>-u</code>: Use an unprivileged port for outgoing connections.
+- <code>-q</code>: Query time server without setting the clock.
+- <code>-b</code>: Forcefully reset the time, using step rather than slew.
+    _ <code>-d</code>: Enable debugging output.
+- [server]: Specify the NTP server to use for synchronization.</p>
+</li>
+</ol>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  <form class="md-feedback" name="feedback" hidden>
+    <fieldset>
+      <legend class="md-feedback__title">
+        Was this page helpful?
+      </legend>
+      <div class="md-feedback__inner">
+        <div class="md-feedback__list">
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page was helpful" data-md-value="1">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12 21.35-1.45-1.32C5.4 15.36 2 12.27 2 8.5 2 5.41 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.08C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.41 22 8.5c0 3.77-3.4 6.86-8.55 11.53z"/></svg>
+            </button>
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page could be improved" data-md-value="0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12 21.35-1.45-1.32C5.4 15.36 2 12.27 2 8.5 2 5.41 4.42 3 7.5 3c.67 0 1.32.12 1.94.33L13 9.35l-4 5zM16.5 3C19.58 3 22 5.41 22 8.5c0 3.77-3.4 6.86-8.55 11.53L12 21.35l-1-7 4.5-5-2.65-5.08C13.87 3.47 15.17 3 16.5 3"/></svg>
+            </button>
+          
+        </div>
+        <div class="md-feedback__note">
+          
+            <div data-md-value="1" hidden>
+              
+              
+                
+              
+              
+              
+                
+                
+              
+              Thanks for your feedback!
+            </div>
+          
+            <div data-md-value="0" hidden>
+              
+              
+                
+              
+              
+              
+                
+                
+              
+              Thanks for your feedback! Help us improve this page by using our <a href="..." target="_blank" rel="noopener">feedback form</a>.
+            </div>
+          
+        </div>
+      </div>
+    </fieldset>
+  </form>
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024 MICHEAL NDOH – <a href="#__consent">Change cookie settings</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+
+
+<h4>Cookie consent</h4>
+<p>We use cookies to recognize your repeated visits and preferences, as well as to measure the effectiveness of our documentation and whether users find what they're searching for. With your consent, you're helping us to make our documentation better.</p>
+<input class="md-toggle" type="checkbox" id="__settings" >
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+    
+      
+        
+  
+  
+    
+    
+  
+  <li class="task-list-item">
+    <label class="task-list-control">
+      <input type="checkbox" name="analytics" checked>
+      <span class="task-list-indicator"></span>
+      Google Analytics
+    </label>
+  </li>
+
+      
+    
+    
+      
+        
+  
+  
+    
+    
+  
+  <li class="task-list-item">
+    <label class="task-list-control">
+      <input type="checkbox" name="github" checked>
+      <span class="task-list-indicator"></span>
+      GitHub
+    </label>
+  </li>
+
+      
+    
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Accept</button>
+    
+    
+    
+  
+    
+    
+      <button type="reset" class="md-button md-button--primary">Reject</button>
+    
+    
+  
+    
+    
+    
+      <label class="md-button" for="__settings">Manage settings</label>
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout((function(){document.querySelector("[data-md-component=consent]").hidden=!1}),250);var form=document.forms.consent;for(var action of["submit","reset"])form.addEventListener(action,(function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map((function(e){return[e,!0]})))),location.hash="",location.reload()}))</script>
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.section", "navigation.tracking", "navigation.expand", "navigation.path", "navigation.prune", "navigation.instant", "navigation.instant.progress", "navigation.instant.preview", "navigation.top", "toc.integrate", "toc.follow", "search.suggest", "search.highlight", "search.share", "search.related", "content.tabs.link", "content.code.annotation", "content.code.copy", "header.autohide"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
