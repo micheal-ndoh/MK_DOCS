@@ -1,7 +1,7 @@
 # Project information
 site_name: LPIC 1 RESOURCES
 site_description: 'An example MkDocs project using the Material theme'
-site_url: 'https://ICE.io/mk-docs'
+site_url: 'https://LPIC-1-RESOURCES'
 
 dev_addr: 0.0.0.0:8000
 
@@ -91,8 +91,8 @@ markdown_extensions:
   - pymdownx.mark
   - attr_list
   - pymdownx.emoji:
-      emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+    emoji_index: !!python/name:pymdownx.emoji.gemoji
+    emoji_generator: !!python/name:pymdownx.emoji.to_png
 
 extra_javascript:
   - javascripts/mathjax.js
@@ -158,6 +158,19 @@ repo_name: MICHEAL's
 repo_url: https://github.com/micheal-ndoh/MK_DOCS.git
 edit_uri: edit/main/docs/
 repo: fontawesome/brands/git-alt
+
+# Footer settings
+footer:
+  links:
+    - icon: fontawesome/brands/github
+      link: https://github.com/micheal-ndoh
+      name: Github
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/micheal-ndoh/
+      name: Linkedin
+    - icon: fontawesome/brands/discord
+      link: https://discord.com/users/1128041830760587446
+      name: Discord
 
 copyright: >
   Copyright &copy; 2024 MICHEAL NDOH –
