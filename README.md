@@ -2,8 +2,8 @@
 
 # **My MkDocs Project**
 
-Welcome to the source files repository for my MkDocs documentation project, utilizing the [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) theme. This project is designed to create clean, responsive, and professional documentation.
-
+Welcome to the source files repository for my LPIC MkDocs documentation project, utilizing the [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) theme. This project is designed to create clean, responsive, and professional documentation.
+Click [here](https://micheal-ndoh.github.io/MK_DOCS) to access the LPIC resource site.
 ---
 
 ## **📚 Project Overview**
